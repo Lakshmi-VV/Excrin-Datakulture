@@ -1,13 +1,14 @@
 import Image from "next/image";
-import Herogif from "../assets/gif/herosection.gif";
+import Herogif from "../assets/gif/herosection.png";
 import LT from "../assets/clientlogo/lt.png";
 import Raymond from "../assets/clientlogo/raymond_logo.png";
 import Serum from "../assets/clientlogo/serum_institute_logo.png";
 import IndianCements from "../assets/clientlogo/the_india_cements_logo.png";
 import TigerAnalytics from "../assets/clientlogo/tiger_analytics_logo.png";
 import TvsCredit from "../assets/clientlogo/tvs_credit_logo.png";
-import Technologiesgif from "../assets/gif/technologies.gif";
-// import CtaSection from "../assets/vdos/cta-section.mp4";
+import Technologiesgif from "../assets/gif/technologies.png";
+import Ctasection from "../assets/gif/ctasection.png";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -160,7 +161,10 @@ export default function HomePage() {
           </p>
           <button className="cta-section__button">Contact us</button>
         </div>
+        <Image src={Ctasection} className="cta-section__image" />
       </section>
+
+      <Footer />
     </>
   );
 }
