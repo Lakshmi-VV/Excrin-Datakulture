@@ -154,14 +154,18 @@ export default function HomePage() {
       <section className="cta-section">
         <div className="cta-section__content">
           <p className="cta-section__title">
-            Let's build your data culture together
+            Lets build your data culture together
           </p>
           <p className="cta-section__description">
             Talk to a Datakulture consultant today.
           </p>
           <button className="cta-section__button">Contact us</button>
         </div>
-        <Image src={Ctasection} className="cta-section__image" />
+        <Image
+          src={Ctasection}
+          className="cta-section__image"
+          alt="cta section image"
+        />
       </section>
 
       <Footer />
