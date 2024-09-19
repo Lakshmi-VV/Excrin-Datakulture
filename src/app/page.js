@@ -148,7 +148,11 @@ export default function HomePage() {
           </p>
         </div>
         <div className="why-datakulture__content">
-          <Image src={Whydatakulture} className="why-datakulture__image" />
+          <Image
+            src={Whydatakulture}
+            className="why-datakulture__image"
+            alt="why-datakulture__image"
+          />
           <div className="why-datakulture__features">
             <div className="why-datakulture__feature">
               <p className="why-datakulture__feature-title">
@@ -175,9 +179,9 @@ export default function HomePage() {
                 Advanced domain expertise
               </p>
               <p className="why-datakulture__feature-description">
-                Providing global data analytics services for over 15 years, we
+                {`Providing global data analytics services for over 15 years, we
                 demonstrate commitment and expertise in delivering quality
-                solutions tailored to our clients' unique needs.
+                solutions tailored to our clients' unique needs.`}
               </p>
               <div className="why-datakulture__learn-more">
                 <span className="why-datakulture__learn-more-text">
