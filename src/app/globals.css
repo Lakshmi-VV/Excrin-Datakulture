@@ -289,7 +289,7 @@ body {
 .footer__description {
   align-self: stretch;
   color: var(--Neutral-neutral-500);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -327,7 +327,7 @@ body {
 .footer__item {
   align-self: stretch;
   color: var(--surface-on-surface);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -340,7 +340,7 @@ body {
   align-items: flex-start;
   align-self: stretch;
   color: var(--Neutral-neutral-400);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -368,7 +368,7 @@ body {
 .why-datakulture__title {
   color: var(--Other-Black);
   text-align: center;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -419,7 +419,7 @@ body {
 .why-datakulture__feature-description {
   align-self: stretch;
   color: var(--Neutral-neutral-500);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -432,7 +432,7 @@ body {
 }
 .why-datakulture__learn-more-text {
   color: var(--Other-Black);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
