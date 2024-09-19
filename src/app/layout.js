@@ -1,5 +1,9 @@
 import "./globals.css";
 import Header from "@/components/Header";
+import { Inter, Catamaran } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+const catamaran = Catamaran({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Datakulture",
@@ -8,14 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.className} ${catamaran.className}`}>
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap"
           rel="stylesheet"
         />
       </head>

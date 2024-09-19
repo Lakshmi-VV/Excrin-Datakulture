@@ -154,7 +154,7 @@ export default function HomePage() {
       <section className="cta-section">
         <div className="cta-section__content">
           <p className="cta-section__title">
-            Lets build your data culture together
+            {`Let's build your data culture together`}
           </p>
           <p className="cta-section__description">
             Talk to a Datakulture consultant today.
