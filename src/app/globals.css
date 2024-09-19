@@ -7,6 +7,8 @@
   --primary-on-primary: #f5f9ff;
   --Neutral-neutral-200: #e5e4e7;
   --Secondary-secondary-500: #fcaf17;
+  --surface-on-surface: #1a1b1f;
+  --Neutral-neutral-400: #7b7986;
 }
 * {
   padding: 0;
@@ -251,4 +253,188 @@ body {
 }
 .cta-section__image {
   width: 100%;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  padding: 80px 0px 48px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  align-self: stretch;
+  background: var(--Primary-primary-10);
+}
+.footer__top {
+  display: flex;
+  padding: 0px 56px;
+  align-items: flex-start;
+  gap: 262px;
+  align-self: stretch;
+}
+.footer__about {
+  display: flex;
+  width: 29%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+}
+.footer__logo-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+  align-self: stretch;
+}
+.footer__description {
+  align-self: stretch;
+  color: var(--Neutral-neutral-500);
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.footer__social-media {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.footer__services-company-resources {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  flex: 1 0 0;
+}
+.footer__services,
+.footer__company,
+.footer__resources {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1 0 0;
+}
+.footer__heading {
+  align-self: stretch;
+  color: var(--Other-Black);
+  font-family: "Catamaran";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.footer__item {
+  align-self: stretch;
+  color: var(--surface-on-surface);
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.footer__bottom {
+  display: flex;
+  padding: 0px 56px;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  color: var(--Neutral-neutral-400);
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Why datakulture */
+.why-datakulture {
+  display: flex;
+  padding: 128px 56px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 64px;
+  align-self: stretch;
+}
+.why-datakulture__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+.why-datakulture__title {
+  color: var(--Other-Black);
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.why-datakulture__subtitle {
+  color: var(--Other-Black);
+  text-align: center;
+  font-family: "Catamaran";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px;
+}
+.why-datakulture__content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+}
+.why-datakulture__image {
+  width: 52%;
+  height: 60%;
+}
+.why-datakulture__features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  flex: 1 0 0;
+}
+.why-datakulture__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+.why-datakulture__feature-title {
+  align-self: stretch;
+  color: var(--Other-Black);
+  font-family: "Catamaran";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+}
+.why-datakulture__feature-description {
+  align-self: stretch;
+  color: var(--Neutral-neutral-500);
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.why-datakulture__learn-more {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.why-datakulture__learn-more-text {
+  color: var(--Other-Black);
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
 }

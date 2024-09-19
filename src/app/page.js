@@ -8,11 +8,13 @@ import TigerAnalytics from "../assets/clientlogo/tiger_analytics_logo.png";
 import TvsCredit from "../assets/clientlogo/tvs_credit_logo.png";
 import Technologiesgif from "../assets/gif/technologies.png";
 import Ctasection from "../assets/gif/ctasection.png";
-import Footer from "@/components/Footer";
+import Whydatakulture from "../assets/gif/whydatakulture.png";
+import { Icons } from "@/assets/Icons";
 
 export default function HomePage() {
   return (
     <>
+      {/* Hero section */}
       <section className="hero-section">
         <div className="hero-section__title-description">
           <div className="hero-section__title">
@@ -137,6 +139,81 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Why datakulture */}
+      <section className="why-datakulture">
+        <div className="why-datakulture__header">
+          <p className="why-datakulture__title">WHY DATAKULTURE</p>
+          <p className="why-datakulture__subtitle">
+            Elevating data intelligence, together
+          </p>
+        </div>
+        <div className="why-datakulture__content">
+          <Image src={Whydatakulture} className="why-datakulture__image" />
+          <div className="why-datakulture__features">
+            <div className="why-datakulture__feature">
+              <p className="why-datakulture__feature-title">
+                Decades of experience
+              </p>
+              <p className="why-datakulture__feature-description">
+                With over 15 years of experience, Datakulture delivers
+                high-quality, tailored solutions using diverse data sets and
+                analytics tools, meeting specific client needs.
+              </p>
+              <div className="why-datakulture__learn-more">
+                <span className="why-datakulture__learn-more-text">
+                  Learn more
+                </span>
+
+                <Icons
+                  icon="arrow_icon"
+                  className="why-datakulture__learn-more-icon"
+                />
+              </div>
+            </div>
+            <div className="why-datakulture__feature">
+              <p className="why-datakulture__feature-title">
+                Advanced domain expertise
+              </p>
+              <p className="why-datakulture__feature-description">
+                Providing global data analytics services for over 15 years, we
+                demonstrate commitment and expertise in delivering quality
+                solutions tailored to our clients' unique needs.
+              </p>
+              <div className="why-datakulture__learn-more">
+                <span className="why-datakulture__learn-more-text">
+                  Learn more
+                </span>
+                <Icons
+                  icon="arrow_icon"
+                  className="why-datakulture__learn-more-icon"
+                />
+              </div>
+            </div>
+            <div className="why-datakulture__feature">
+              <p className="why-datakulture__feature-title">
+                Strategic technology partnerships
+              </p>
+              <p className="why-datakulture__feature-description">
+                Strategic tech partnerships are collaborations between companies
+                to create, integrate, or market new tech solutions. They
+                leverage mutual strengths, share resources and expertise, and
+                boost innovation and growth.
+              </p>
+              <div className="why-datakulture__learn-more">
+                <span className="why-datakulture__learn-more-text">
+                  Learn more
+                </span>
+                <Icons
+                  icon="arrow_icon"
+                  className="why-datakulture__learn-more-icon"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our technologies */}
       <section className="technologies">
         <div className="technologies__content">
           <p className="technologies__title">OUR TECHNOLOGIES</p>
@@ -151,6 +228,7 @@ export default function HomePage() {
         />
       </section>
 
+      {/* CTA section */}
       <section className="cta-section">
         <div className="cta-section__content">
           <p className="cta-section__title">
@@ -167,8 +245,6 @@ export default function HomePage() {
           alt="cta section image"
         />
       </section>
-
-      <Footer />
     </>
   );
 }
