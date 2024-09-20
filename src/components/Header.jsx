@@ -16,7 +16,7 @@ function Header() {
           </div>
         </div>
         <div className="header__button">
-          <button className="header__contact-button">Contact us</button>
+          <button className=" btn btn__primary btn__medium">Contact us</button>
         </div>
       </div>
     </>
