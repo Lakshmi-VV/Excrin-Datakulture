@@ -17,7 +17,49 @@ import Datavisualization from "../assets/gif/datavisualization.png";
 
 export default function HomePage() {
   return (
-    <></>
+    <>
+      {/* Our technologies */}
+      <section className="technologies__section">
+        <div className="container technologies">
+          <div className="technologies__content">
+            <h2 className="technologies__title">OUR TECHNOLOGIES</h2>
+            <p className="technologies__description">
+              Empowering Innovations with leading-edge technologies
+            </p>
+          </div>
+          <Image
+            src={Technologiesgif}
+            className="technologies__image"
+            alt="Technologies GIF"
+          />
+        </div>
+      </section>
+
+      {/* CTA section */}
+      <section className="cta-section">
+        <div className="container cta-container">
+          <div className="cta-section__content-btn">
+            <div className="cta-section__content">
+              <p className="cta-section__title">
+                {`Let's build your data culture together`}
+              </p>
+              <p className="cta-section__description">
+                Talk to a Datakulture consultant today.
+              </p>
+            </div>
+            <button className="btn btn__secondary btn__large cta-section__btn">
+              Contact us
+            </button>
+          </div>
+
+          <Image
+            src={Ctasection}
+            className="cta-section__image"
+            alt="cta section image"
+          />
+        </div>
+      </section>
+    </>
     // <>
     //   {/* Hero section */}
     //   <section className="hero-section">
@@ -289,41 +331,7 @@ export default function HomePage() {
     //     </div>
     //   </section>
 
-    //   {/* Our technologies */}
-    //   <section className="technologies">
-    //     <div className="technologies__content">
-    //       <p className="technologies__title">OUR TECHNOLOGIES</p>
-    //       <p className="technologies__description">
-    //         Empowering Innovations with leading-edge technologies
-    //       </p>
-    //     </div>
-    //     <Image
-    //       src={Technologiesgif}
-    //       className="technologies__image"
-    //       alt="Technologies GIF"
-    //     />
-    //   </section>
-
-    //   {/* CTA section */}
-    //   <section className="cta-section">
-    //     <div className="cta-section__content-btn">
-    //       <div className="cta-section__content">
-    //         <p className="cta-section__title">
-    //           {`Let's build your data culture together`}
-    //         </p>
-    //         <p className="cta-section__description">
-    //           Talk to a Datakulture consultant today.
-    //         </p>
-    //       </div>
-    //       <button className="btn btn__secondary btn__large">Contact us</button>
-    //     </div>
-
-    //     <Image
-    //       src={Ctasection}
-    //       className="cta-section__image"
-    //       alt="cta section image"
-    //     />
-    //   </section>
+    //
     // </>
   );
 }
