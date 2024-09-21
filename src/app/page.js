@@ -18,6 +18,70 @@ import Datavisualization from "../assets/gif/datavisualization.png";
 export default function HomePage() {
   return (
     <>
+      {/* Why datakulture */}
+      <section className="why-datakulture__section">
+        <div className="container why-datakulture">
+          <div className="why-datakulture__header">
+            <h2 className="why-datakulture__title">WHY DATAKULTURE</h2>
+            <p className="why-datakulture__subtitle">
+              Elevating data intelligence, together
+            </p>
+          </div>
+          <div className="why-datakulture__content">
+            <Image
+              src={Whydatakulture}
+              className="why-datakulture__image"
+              alt="why-datakulture__image"
+            />
+            <div className="why-datakulture__features">
+              <div className="why-datakulture__feature">
+                <h3 className="why-datakulture__feature-title">
+                  Decades of experience
+                </h3>
+                <p className="why-datakulture__feature-description">
+                  With over 15 years of experience, Datakulture delivers
+                  high-quality, tailored solutions using diverse data sets and
+                  analytics tools, meeting specific client needs.
+                </p>
+                <div className="learn-more__btn">
+                  <span className="learn-more__btn-text">Learn more</span>
+                  <Icons icon="arrow_icon" className="learn-more__btn-icon" />
+                </div>
+              </div>
+              <div className="why-datakulture__feature">
+                <h3 className="why-datakulture__feature-title">
+                  Advanced domain expertise
+                </h3>
+                <p className="why-datakulture__feature-description">
+                  {`Providing global data analytics services for over 15 years, we
+                demonstrate commitment and expertise in delivering quality
+                solutions tailored to our clients' unique needs.`}
+                </p>
+                <div className="learn-more__btn">
+                  <span className="learn-more__btn-text">Learn more</span>
+                  <Icons icon="arrow_icon" className="learn-more__btn-icon" />
+                </div>
+              </div>
+              <div className="why-datakulture__feature">
+                <h3 className="why-datakulture__feature-title">
+                  Strategic technology partnerships
+                </h3>
+                <p className="why-datakulture__feature-description">
+                  Strategic tech partnerships are collaborations between
+                  companies to create, integrate, or market new tech solutions.
+                  They leverage mutual strengths, share resources and expertise,
+                  and boost innovation and growth.
+                </p>
+                <div className="learn-more__btn">
+                  <span className="learn-more__btn-text">Learn more</span>
+                  <Icons icon="arrow_icon" className="learn-more__btn-icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our technologies */}
       <section className="technologies__section">
         <div className="container technologies">
@@ -264,68 +328,6 @@ export default function HomePage() {
     //         <div className="learn-more__btn">
     //           <span className="learn-more__btn-text">Learn more</span>
     //           <Icons icon="arrow_icon" className="learn-more__btn-icon" />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </section>
-
-    //   {/* Why datakulture */}
-    //   <section className="why-datakulture">
-    //     <div className="why-datakulture__header">
-    //       <p className="why-datakulture__title">WHY DATAKULTURE</p>
-    //       <p className="why-datakulture__subtitle">
-    //         Elevating data intelligence, together
-    //       </p>
-    //     </div>
-    //     <div className="why-datakulture__content">
-    //       <Image
-    //         src={Whydatakulture}
-    //         className="why-datakulture__image"
-    //         alt="why-datakulture__image"
-    //       />
-    //       <div className="why-datakulture__features">
-    //         <div className="why-datakulture__feature">
-    //           <p className="why-datakulture__feature-title">
-    //             Decades of experience
-    //           </p>
-    //           <p className="why-datakulture__feature-description">
-    //             With over 15 years of experience, Datakulture delivers
-    //             high-quality, tailored solutions using diverse data sets and
-    //             analytics tools, meeting specific client needs.
-    //           </p>
-    //           <div className="learn-more__btn">
-    //             <span className="learn-more__btn-text">Learn more</span>
-    //             <Icons icon="arrow_icon" className="learn-more__btn-icon" />
-    //           </div>
-    //         </div>
-    //         <div className="why-datakulture__feature">
-    //           <p className="why-datakulture__feature-title">
-    //             Advanced domain expertise
-    //           </p>
-    //           <p className="why-datakulture__feature-description">
-    //             {`Providing global data analytics services for over 15 years, we
-    //             demonstrate commitment and expertise in delivering quality
-    //             solutions tailored to our clients' unique needs.`}
-    //           </p>
-    //           <div className="learn-more__btn">
-    //             <span className="learn-more__btn-text">Learn more</span>
-    //             <Icons icon="arrow_icon" className="learn-more__btn-icon" />
-    //           </div>
-    //         </div>
-    //         <div className="why-datakulture__feature">
-    //           <p className="why-datakulture__feature-title">
-    //             Strategic technology partnerships
-    //           </p>
-    //           <p className="why-datakulture__feature-description">
-    //             Strategic tech partnerships are collaborations between companies
-    //             to create, integrate, or market new tech solutions. They
-    //             leverage mutual strengths, share resources and expertise, and
-    //             boost innovation and growth.
-    //           </p>
-    //           <div className="learn-more__btn">
-    //             <span className="learn-more__btn-text">Learn more</span>
-    //             <Icons icon="arrow_icon" className="learn-more__btn-icon" />
-    //           </div>
     //         </div>
     //       </div>
     //     </div>

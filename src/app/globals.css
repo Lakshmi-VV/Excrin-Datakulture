@@ -698,7 +698,46 @@ body {
   font-weight: 500;
   line-height: 26px;
 }
-
+@media (max-width: 768px) {
+  .why-datakulture {
+    padding: 80px 24px;
+  }
+  .why-datakulture__header {
+    align-items: flex-start;
+  }
+  .why-datakulture__subtitle {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: left;
+  }
+  .why-datakulture__content {
+    flex-direction: column;
+  }
+  .why-datakulture__image {
+    width: 100%;
+  }
+  .why-datakulture__feature-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media ((min-width: 769px) and (max-width: 1023px)) {
+  .why-datakulture {
+    padding: 80px 24px;
+  }
+  .why-datakulture__header {
+    align-items: flex-start;
+  }
+  .why-datakulture__subtitle {
+    text-align: left;
+  }
+  .why-datakulture__content {
+    flex-direction: column;
+  }
+  .why-datakulture__image {
+    width: 100%;
+  }
+}
 /* Our-services */
 .our-services {
   display: flex;
