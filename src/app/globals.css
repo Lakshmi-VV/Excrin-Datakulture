@@ -197,8 +197,6 @@ body {
     width: 100%;
     z-index: 1;
     background-color: var(--White);
-    left: 0;
-    height: 100vh;
   }
   .menu__btn .btn {
     width: 100%;
@@ -215,8 +213,6 @@ body {
     width: 100%;
     z-index: 1;
     background-color: var(--White);
-    left: 0;
-    height: 100vh;
   }
 }
 
