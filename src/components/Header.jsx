@@ -47,7 +47,7 @@ function Header() {
           </div>
 
           <nav className={isMenuOpen ? "menu menu--open" : "menu"}>
-            <div className="container menu__list-btn">
+            <div className="menu__list-btn">
               <ul className="menu__list">
                 <li className="menu__item">
                   <span className="menu__text">Services</span>
