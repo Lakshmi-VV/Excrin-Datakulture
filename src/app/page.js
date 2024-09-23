@@ -64,8 +64,8 @@ export default function HomePage() {
                   />
                   <h3 className="our-services__item-title">Data consulting</h3>
                   <p className="our-services__item-description">
-                    Understanding the purpose, value, and scale of your
-                    organization's data.
+                    {`Understanding the purpose, value, and scale of your
+                    organization's data.`}
                   </p>
                 </div>
                 <div className="learn-more__btn">
