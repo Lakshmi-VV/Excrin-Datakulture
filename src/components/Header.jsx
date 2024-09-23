@@ -59,15 +59,15 @@ function Header() {
               <ul className="menu__list">
                 <li className="menu__item">
                   <span className="menu__text">Services</span>
-                  <Icons icon="arrow_right" className="menu__icon" />
+                  <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
                 <li className="menu__item">
                   <span className="menu__text">Company</span>
-                  <Icons icon="arrow_right" className="menu__icon" />
+                  <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
                 <li className="menu__item">
                   <span className="menu__text">Resources</span>
-                  <Icons icon="arrow_right" className="menu__icon" />
+                  <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
               </ul>
               <div className="menu__btn">

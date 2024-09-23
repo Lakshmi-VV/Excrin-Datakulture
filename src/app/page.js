@@ -14,10 +14,111 @@ import Dataconsultation from "../assets/gif/dataconsultation.png";
 import Dataengineering from "../assets/gif/dataengineering.png";
 import Datascience from "../assets/gif/datascience.png";
 import Datavisualization from "../assets/gif/datavisualization.png";
+import Gold from "../assets/partnerlogo/microsoftgold.png";
+import Tableau from "../assets/partnerlogo/tableau.png";
+import Azure from "../assets/partnerlogo/azure.png";
+import Aws from "../assets/partnerlogo/aws.png";
+import TestimonialPattern from "../assets/gif/testimonalpattern.png";
+import Client from "../assets/clientimg.png";
 
 export default function HomePage() {
   return (
     <>
+      {/* Our services */}
+      <section className="our-services_section">
+        <div className="container our-services">
+          <div className="our-services__content">
+            <h2 className="our-services__title">OUR SERVICES</h2>
+            <p className="our-services__subtitle">
+              Catalyzing your data journey
+            </p>
+          </div>
+          <div className="our-services__list">
+            <div>
+              <div className="our-services__item">
+                <div className="our-services__item-content">
+                  <Image
+                    src={Dataengineering}
+                    alt="dataengineering image"
+                    className="our-services__item-image"
+                  />
+                  <h3 className="our-services__item-title">Data Engineering</h3>
+                  <p className="our-services__item-description">
+                    Designing systems to collect, store, transport and transform
+                    your data.
+                  </p>
+                </div>
+                <div className="learn-more__btn">
+                  <span className="learn-more__btn-text">Learn more</span>
+                  <Icons icon="right_arrow" className="learn-more__btn-icon" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="our-services__item">
+                <div className="our-services__item-content">
+                  <Image
+                    src={Dataconsultation}
+                    alt="Data consulting image"
+                    className="our-services__item-image"
+                  />
+                  <h3 className="our-services__item-title">Data consulting</h3>
+                  <p className="our-services__item-description">
+                    Understanding the purpose, value, and scale of your
+                    organization's data.
+                  </p>
+                </div>
+                <div className="learn-more__btn">
+                  <span className="learn-more__btn-text">Learn more</span>
+                  <Icons icon="right_arrow" className="learn-more__btn-icon" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="our-services__item">
+                <div className="our-services__item-content">
+                  <Image
+                    src={Datavisualization}
+                    alt="Data visualization image"
+                    className="our-services__item-image"
+                  />
+                  <h3 className="our-services__item-title">
+                    Data visualization
+                  </h3>
+                  <p className="our-services__item-description">
+                    Representing relationships and revealing hidden insights in
+                    your data.
+                  </p>
+                </div>
+                <div className="learn-more__btn">
+                  <span className="learn-more__btn-text">Learn more</span>
+                  <Icons icon="right_arrow" className="learn-more__btn-icon" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="our-services__item">
+                <div className="our-services__item-content">
+                  <Image
+                    src={Datascience}
+                    alt="Data science image"
+                    className="our-services__item-image"
+                  />
+                  <h3 className="our-services__item-title">Data science</h3>
+                  <p className="our-services__item-description">
+                    Leveraging AI and ML to unlock unprecedented business value.
+                  </p>
+                </div>
+                <div className="learn-more__btn">
+                  <span className="learn-more__btn-text">Learn more</span>
+                  <Icons icon="right_arrow" className="learn-more__btn-icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why datakulture */}
       <section className="why-datakulture__section">
         <div className="container why-datakulture">
@@ -45,7 +146,7 @@ export default function HomePage() {
                 </p>
                 <div className="learn-more__btn">
                   <span className="learn-more__btn-text">Learn more</span>
-                  <Icons icon="arrow_icon" className="learn-more__btn-icon" />
+                  <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
               <div className="why-datakulture__feature">
@@ -59,7 +160,7 @@ export default function HomePage() {
                 </p>
                 <div className="learn-more__btn">
                   <span className="learn-more__btn-text">Learn more</span>
-                  <Icons icon="arrow_icon" className="learn-more__btn-icon" />
+                  <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
               <div className="why-datakulture__feature">
@@ -74,7 +175,7 @@ export default function HomePage() {
                 </p>
                 <div className="learn-more__btn">
                   <span className="learn-more__btn-text">Learn more</span>
-                  <Icons icon="arrow_icon" className="learn-more__btn-icon" />
+                  <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
             </div>
@@ -99,14 +200,96 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Testimonial */}
+      {/* <section className="testimonial__section">
+        <div className="container testimonial">
+          <div className="testimonial__content">
+            <div className="testimonial__title-arrows">
+              <div className="testimonial__title-description">
+                <h2 className="testimonial__title">CLIENT VOICES</h2>
+                <p className="testimonial__description">
+                  Partnerships that speak success
+                </p>
+              </div>
+              <div className="testimonal__arrows">
+                <Icons icon="left_arrow" width={24} height={24} />
+                <Icons icon="right_arrow" width={24} height={24} />
+              </div>
+            </div>
+            <div className="testimonial__content-text">
+              <div className="testimonial__image">
+                <Image
+                  src={TestimonialPattern}
+                  alt="TestimonialPattern"
+                  className="testimonial__image"
+                />
+              </div>
+              <div className="testimonial__client-text">
+                <div>
+                  <p className="client__review">
+                    We were really impressed with their service orientation and
+                    understanding of our business. Showcasing expertise in data
+                    engineering, Datakulture was successful in implementing the
+                    dashboard, allowing the client to track their KPIs and make
+                    data-driven decisions. The team's solid understanding of the
+                    client's business and their needs was critical to the
+                    project's success.
+                  </p>
+                </div>
+                <div className="client__info">
+                  <Image
+                    src={Client}
+                    alt="client image"
+                    className="client_image"
+                  />
+                  <div className="client__name-company">
+                    <p className="client-name">Biswajit Rath</p>
+                    <p className="client-company">
+                      Head of Analytics, Raymond Limited.
+                    </p>
+                  </div>
+                  <div className="testimonal__arrows-mob">
+                    <div>
+                      <Icons icon="left_arrow" width={24} height={24} />
+                    </div>
+                    <div>
+                      <Icons icon="right_arrow" width={24} height={24} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="partnership">
+            <div className="partnership__text">
+              <p>We have Implemented 250+ Projects in Partnership with</p>
+            </div>
+            <div className="partners">
+              <div className="partner">
+                <Image src={Gold} className="microsoft-gold-partner" />
+              </div>
+              <div className="partner">
+                <Image src={Tableau} className="Tableau-partner" />
+              </div>
+              <div className="partner">
+                <Image src={Aws} className="Aws-partner" />
+              </div>
+              <div className="partner">
+                <Image src={Azure} className="Azure-partner" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
       {/* CTA section */}
       <section className="cta-section">
         <div className="container cta-container">
           <div className="cta-section__content-btn">
             <div className="cta-section__content">
-              <p className="cta-section__title">
+              <h2 className="cta-section__title">
                 {`Let's build your data culture together`}
-              </p>
+              </h2>
               <p className="cta-section__description">
                 Talk to a Datakulture consultant today.
               </p>
@@ -124,7 +307,7 @@ export default function HomePage() {
         </div>
       </section>
     </>
-    // <>
+
     //   {/* Hero section */}
     //   <section className="hero-section">
     //     <div className="hero-section__title-description">
@@ -251,89 +434,5 @@ export default function HomePage() {
     //       </div>
     //     </div>
     //   </section>
-
-    //   {/* Our services */}
-    //   <section className="our-services">
-    //     <div className="our-services__content">
-    //       <p className="our-services__title">OUR SERVICES</p>
-    //       <p className="our-services__subtitle">Catalyzing your data journey</p>
-    //     </div>
-    //     <div className="our-services__list">
-    //       <div className="our-services__item">
-    //         <div className="our-services__item-content">
-    //           <Image
-    //             src={Dataengineering}
-    //             alt="dataengineering image"
-    //             className="our-services__item-image"
-    //           />
-    //           <p className="our-services__item-title">Data Engineering</p>
-    //           <p className="our-services__item-description">
-    //             Designing systems to collect, store, transport and transform
-    //             your data.
-    //           </p>
-    //         </div>
-    //         <div className="learn-more__btn">
-    //           <span className="learn-more__btn-text">Learn more</span>
-    //           <Icons icon="arrow_icon" className="learn-more__btn-icon" />
-    //         </div>
-    //       </div>
-    //       <div className="our-services__item">
-    //         <div className="our-services__item-content">
-    //           <Image
-    //             src={Dataconsultation}
-    //             alt="Data consulting image"
-    //             className="our-services__item-image"
-    //           />
-    //           <p className="our-services__item-title">Data consulting</p>
-    //           <p className="our-services__item-description">
-    //             Understanding the purpose, value, and scale of your
-    //             organization's data.
-    //           </p>
-    //         </div>
-    //         <div className="learn-more__btn">
-    //           <span className="learn-more__btn-text">Learn more</span>
-    //           <Icons icon="arrow_icon" className="learn-more__btn-icon" />
-    //         </div>
-    //       </div>
-    //       <div className="our-services__item">
-    //         <div className="our-services__item-content">
-    //           <Image
-    //             src={Datavisualization}
-    //             alt="Data visualization image"
-    //             className="our-services__item-image"
-    //           />
-    //           <p className="our-services__item-title">Data visualization</p>
-    //           <p className="our-services__item-description">
-    //             Representing relationships and revealing hidden insights in your
-    //             data.
-    //           </p>
-    //         </div>
-    //         <div className="learn-more__btn">
-    //           <span className="learn-more__btn-text">Learn more</span>
-    //           <Icons icon="arrow_icon" className="learn-more__btn-icon" />
-    //         </div>
-    //       </div>
-    //       <div className="our-services__item">
-    //         <div className="our-services__item-content">
-    //           <Image
-    //             src={Datascience}
-    //             alt="Data science image"
-    //             className="our-services__item-image"
-    //           />
-    //           <p className="our-services__item-title">Data science</p>
-    //           <p className="our-services__item-description">
-    //             Leveraging AI and ML to unlock unprecedented business value.
-    //           </p>
-    //         </div>
-    //         <div className="learn-more__btn">
-    //           <span className="learn-more__btn-text">Learn more</span>
-    //           <Icons icon="arrow_icon" className="learn-more__btn-icon" />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </section>
-
-    //
-    // </>
   );
 }

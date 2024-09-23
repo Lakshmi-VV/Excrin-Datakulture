@@ -8,8 +8,8 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 168 40"
           fill="none"
-          width={props.width || "168px"}
-          height={props.height || "40px"}
+          width={width || "168px"}
+          height={height || "40px"}
           className={className}
           style={style}
           {...props}
@@ -72,8 +72,8 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={props.width || "24px"}
-          height={props.height || "24px"}
+          width={width || "24px"}
+          height={height || "24px"}
           className={className}
           style={style}
           {...props}
@@ -90,8 +90,8 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={props.width || "24px"}
-          height={props.height || "24px"}
+          width={width || "24px"}
+          height={height || "24px"}
           className={className}
           style={style}
           {...props}
@@ -108,8 +108,8 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={props.width || "24px"}
-          height={props.height || "24px"}
+          width={width || "24px"}
+          height={height || "24px"}
           className={className}
           style={style}
           {...props}
@@ -126,8 +126,8 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={props.width || "24px"}
-          height={props.height || "24px"}
+          width={width || "24px"}
+          height={height || "24px"}
           className={className}
           style={style}
           {...props}
@@ -140,12 +140,12 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
           />
         </svg>
       );
-    case "arrow_icon":
+    case "right_arrow":
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={props.width || "20px"}
-          height={props.height || "20px"}
+          width={width || "20px"}
+          height={height || "20px"}
           className={className}
           style={style}
           {...props}
@@ -156,12 +156,31 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
           <path d="M14 10L0 10" stroke="black" />
         </svg>
       );
+    case "left_arrow":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={width || "20px"}
+          height={height || "20px"}
+          className={className}
+          style={style}
+          {...props}
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M7.86805e-07 10L9 4.80385L9 15.1962L7.86805e-07 10Z"
+            fill="black"
+          />
+          <path d="M6 10L20 10" stroke="black" />
+        </svg>
+      );
     case "menu_button":
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={props.width || "24px"}
-          height={props.height || "25px"}
+          width={width || "24px"}
+          height={height || "25px"}
           className={className}
           style={style}
           {...props}
@@ -178,8 +197,8 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={props.width || "24px"}
-          height={props.height || "25px"}
+          width={width || "24px"}
+          height={height || "25px"}
           className={className}
           style={style}
           {...props}
@@ -192,12 +211,12 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
           />
         </svg>
       );
-    case "arrow_right":
+    case "menu_arrow_right":
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={props.width || "24px"}
-          height={props.height || "24px"}
+          width={width || "24px"}
+          height={height || "24px"}
           className={className}
           style={style}
           {...props}
