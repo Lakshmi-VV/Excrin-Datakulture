@@ -26,26 +26,46 @@ function Footer() {
               <div className="footer__services">
                 <h4 className="footer__heading">Services</h4>
                 <ul className="footer__list-item">
-                  <li className="footer__item">Data consulting</li>
-                  <li className="footer__item">Data engineering</li>
-                  <li className="footer__item">Data science</li>
-                  <li className="footer__item">Data visualization</li>
+                  <li className="footer__item">
+                    <a>Data consulting</a>
+                  </li>
+                  <li className="footer__item">
+                    <a>Data engineering</a>
+                  </li>
+                  <li className="footer__item">
+                    <a>Data science</a>
+                  </li>
+                  <li className="footer__item">
+                    <a>Data visualization</a>
+                  </li>
                 </ul>
               </div>
               <div className="footer__company">
                 <h4 className="footer__heading">Company</h4>
                 <ul className="footer__list-item">
-                  <li className="footer__item">About</li>
-                  <li className="footer__item">Careers</li>
-                  <li className="footer__item">Privacy Policy</li>
-                  <li className="footer__item">Contact</li>
+                  <li className="footer__item">
+                    <a>About</a>
+                  </li>
+                  <li className="footer__item">
+                    <a>Careers</a>
+                  </li>
+                  <li className="footer__item">
+                    <a>Privacy Policy</a>
+                  </li>
+                  <li className="footer__item">
+                    <a>Contact</a>
+                  </li>
                 </ul>
               </div>
               <div className="footer__resources">
                 <h4 className="footer__heading">Resources</h4>
                 <ul className="footer__list-item">
-                  <li className="footer__item">Blog</li>
-                  <li className="footer__item">Customer stories</li>
+                  <li className="footer__item">
+                    <a>Blog</a>
+                  </li>
+                  <li className="footer__item">
+                    <a>Customer stories</a>
+                  </li>
                 </ul>
               </div>
             </div>

@@ -20,6 +20,7 @@ import Azure from "../assets/partnerlogo/azure.png";
 import Aws from "../assets/partnerlogo/aws.png";
 import TestimonialPattern from "../assets/gif/testimonalpattern.png";
 import Client from "../assets/clientimg.png";
+import TestimonialHorizontal from "../assets/gif/testimonialhorizontal.png";
 
 export default function HomePage() {
   return (
@@ -28,10 +29,10 @@ export default function HomePage() {
       <section className="our-services_section">
         <div className="container our-services">
           <div className="our-services__content">
-            <h2 className="our-services__title">OUR SERVICES</h2>
-            <p className="our-services__subtitle">
+            <h4 className="our-services__title">OUR SERVICES</h4>
+            <h2 className="our-services__subtitle">
               Catalyzing your data journey
-            </p>
+            </h2>
           </div>
           <div className="our-services__list">
             <div>
@@ -49,7 +50,7 @@ export default function HomePage() {
                   </p>
                 </div>
                 <div className="learn-more__btn">
-                  <span className="learn-more__btn-text">Learn more</span>
+                  <a className="learn-more__btn-text">Learn more</a>
                   <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
@@ -69,7 +70,7 @@ export default function HomePage() {
                   </p>
                 </div>
                 <div className="learn-more__btn">
-                  <span className="learn-more__btn-text">Learn more</span>
+                  <a className="learn-more__btn-text">Learn more</a>
                   <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
@@ -91,7 +92,7 @@ export default function HomePage() {
                   </p>
                 </div>
                 <div className="learn-more__btn">
-                  <span className="learn-more__btn-text">Learn more</span>
+                  <a className="learn-more__btn-text">Learn more</a>
                   <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
@@ -110,7 +111,7 @@ export default function HomePage() {
                   </p>
                 </div>
                 <div className="learn-more__btn">
-                  <span className="learn-more__btn-text">Learn more</span>
+                  <a className="learn-more__btn-text">Learn more</a>
                   <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
@@ -123,10 +124,10 @@ export default function HomePage() {
       <section className="why-datakulture__section">
         <div className="container why-datakulture">
           <div className="why-datakulture__header">
-            <h2 className="why-datakulture__title">WHY DATAKULTURE</h2>
-            <p className="why-datakulture__subtitle">
+            <h4 className="why-datakulture__title">WHY DATAKULTURE</h4>
+            <h2 className="why-datakulture__subtitle">
               Elevating data intelligence, together
-            </p>
+            </h2>
           </div>
           <div className="why-datakulture__content">
             <Image
@@ -145,7 +146,7 @@ export default function HomePage() {
                   analytics tools, meeting specific client needs.
                 </p>
                 <div className="learn-more__btn">
-                  <span className="learn-more__btn-text">Learn more</span>
+                  <a className="learn-more__btn-text">Learn more</a>
                   <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
@@ -159,7 +160,7 @@ export default function HomePage() {
                 solutions tailored to our clients' unique needs.`}
                 </p>
                 <div className="learn-more__btn">
-                  <span className="learn-more__btn-text">Learn more</span>
+                  <a className="learn-more__btn-text">Learn more</a>
                   <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
@@ -174,7 +175,7 @@ export default function HomePage() {
                   and boost innovation and growth.
                 </p>
                 <div className="learn-more__btn">
-                  <span className="learn-more__btn-text">Learn more</span>
+                  <a className="learn-more__btn-text">Learn more</a>
                   <Icons icon="right_arrow" className="learn-more__btn-icon" />
                 </div>
               </div>
@@ -187,10 +188,10 @@ export default function HomePage() {
       <section className="technologies__section">
         <div className="container technologies">
           <div className="technologies__content">
-            <h2 className="technologies__title">OUR TECHNOLOGIES</h2>
-            <p className="technologies__description">
+            <h4 className="technologies__title">OUR TECHNOLOGIES</h4>
+            <h2 className="technologies__description">
               Empowering Innovations with leading-edge technologies
-            </p>
+            </h2>
           </div>
           <Image
             src={Technologiesgif}
@@ -201,39 +202,49 @@ export default function HomePage() {
       </section>
 
       {/* Testimonial */}
-      {/* <section className="testimonial__section">
+      <section className="testimonial__section">
         <div className="container testimonial">
           <div className="testimonial__content">
             <div className="testimonial__title-arrows">
               <div className="testimonial__title-description">
-                <h2 className="testimonial__title">CLIENT VOICES</h2>
-                <p className="testimonial__description">
+                <h4 className="testimonial__title">CLIENT VOICES</h4>
+                <h2 className="testimonial__description">
                   Partnerships that speak success
-                </p>
+                </h2>
               </div>
-              <div className="testimonal__arrows">
-                <Icons icon="left_arrow" width={24} height={24} />
-                <Icons icon="right_arrow" width={24} height={24} />
+              <div className="testimonial__arrows">
+                <a className="testimonial__arrow">
+                  <Icons icon="left_arrow" width={24} height={24} />
+                </a>
+                <a className="testimonial__arrow">
+                  <Icons icon="right_arrow" width={24} height={24} />
+                </a>
               </div>
             </div>
             <div className="testimonial__content-text">
-              <div className="testimonial__image">
+              <div className="testimonial__img">
                 <Image
                   src={TestimonialPattern}
                   alt="TestimonialPattern"
                   className="testimonial__image"
                 />
+                <Image
+                  src={TestimonialHorizontal}
+                  alt="TestimonialHorizontal pattern"
+                  className="testimonialHorizontal__image"
+                />
               </div>
               <div className="testimonial__client-text">
                 <div>
                   <p className="client__review">
+                    {`
                     We were really impressed with their service orientation and
                     understanding of our business. Showcasing expertise in data
                     engineering, Datakulture was successful in implementing the
                     dashboard, allowing the client to track their KPIs and make
                     data-driven decisions. The team's solid understanding of the
                     client's business and their needs was critical to the
-                    project's success.
+                    project's success.`}
                   </p>
                 </div>
                 <div className="client__info">
@@ -249,12 +260,12 @@ export default function HomePage() {
                     </p>
                   </div>
                   <div className="testimonal__arrows-mob">
-                    <div>
+                    <a>
                       <Icons icon="left_arrow" width={24} height={24} />
-                    </div>
-                    <div>
+                    </a>
+                    <a>
                       <Icons icon="right_arrow" width={24} height={24} />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -266,21 +277,33 @@ export default function HomePage() {
             </div>
             <div className="partners">
               <div className="partner">
-                <Image src={Gold} className="microsoft-gold-partner" />
+                <Image
+                  src={Gold}
+                  className="microsoft-gold-partner"
+                  alt="microsoft-gold-partner"
+                />
               </div>
               <div className="partner">
-                <Image src={Tableau} className="Tableau-partner" />
+                <Image
+                  src={Tableau}
+                  className="Tableau-partner"
+                  alt="Tableau-partner"
+                />
               </div>
               <div className="partner">
-                <Image src={Aws} className="Aws-partner" />
+                <Image src={Aws} className="Aws-partner" alt="Aws-partner" />
               </div>
               <div className="partner">
-                <Image src={Azure} className="Azure-partner" />
+                <Image
+                  src={Azure}
+                  className="Azure-partner"
+                  alt="Azure-partner"
+                />
               </div>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* CTA section */}
       <section className="cta-section">
@@ -294,9 +317,9 @@ export default function HomePage() {
                 Talk to a Datakulture consultant today.
               </p>
             </div>
-            <button className="btn btn__secondary btn__large cta-section__btn">
+            <a className="btn btn__secondary btn__large cta-section__btn">
               Contact us
-            </button>
+            </a>
           </div>
 
           <Image

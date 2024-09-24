@@ -26,15 +26,19 @@ function Header() {
               <Icons icon="datakulture_logo" />
             </div>
             <nav className="navbar__menu">
-              <div className="navbar__item">Services</div>
-              <div className="navbar__item">Company</div>
-              <div className="navbar__item">Resources</div>
+              <div className="navbar__item">
+                <a>Services</a>
+              </div>
+              <div className="navbar__item">
+                <a>Company</a>
+              </div>
+              <div className="navbar__item">
+                <a>Resources</a>
+              </div>
             </nav>
           </div>
           <div className="header__button">
-            <button className=" btn btn__primary btn__medium">
-              Contact us
-            </button>
+            <a className=" btn btn__primary btn__medium">Contact us</a>
           </div>
         </div>
       </header>
@@ -58,22 +62,20 @@ function Header() {
             <div className="menu__list-btn">
               <ul className="menu__list">
                 <li className="menu__item">
-                  <span className="menu__text">Services</span>
+                  <a className="menu__text">Services</a>
                   <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
                 <li className="menu__item">
-                  <span className="menu__text">Company</span>
+                  <a className="menu__text">Company</a>
                   <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
                 <li className="menu__item">
-                  <span className="menu__text">Resources</span>
+                  <a className="menu__text">Resources</a>
                   <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
               </ul>
               <div className="menu__btn">
-                <button className="btn btn__large btn__primary">
-                  Contact us
-                </button>
+                <a className="btn btn__large btn__primary">Contact us</a>
               </div>
             </div>
           </nav>
