@@ -1277,6 +1277,12 @@ body {
   height: 100%;
 }
 @media (max-width: 768px) {
+  .success-stories__title {
+    text-align: left;
+  }
+  .success-stories__subtitle {
+    text-align: left;
+  }
   .success-stories {
     padding: 80px 24px;
     gap: 64px;

@@ -222,10 +222,10 @@ export default function HomePage() {
               </div>
               <div className="card__content-btn">
                 <div className="card__content">
-                  <a className="card__content-title">
+                  <h3 className="card__content-title">
                     Preparing data warehouse for leading third-party logistics
                     (3PL) provider
-                  </a>
+                  </h3>
                   <p className="card__content-description">
                     Enabling near real-time data analysis, automating the ETL
                     process with audit and error tracking, and providing a
@@ -247,10 +247,10 @@ export default function HomePage() {
               </div>
               <div className="card__content-btn">
                 <div className="card__content">
-                  <a className="card__content-title">
+                  <h3 className="card__content-title">
                     Helped major tool manufacturer in USA query response time to
                     be 10x faster
-                  </a>
+                  </h3>
                   <p className="card__content-description">
                     Enabling near real-time data analysis, automating the ETL
                     process with audit and error tracking, and providing a
@@ -272,10 +272,10 @@ export default function HomePage() {
               </div>
               <div className="card__content-btn">
                 <div className="card__content">
-                  <a className="card__content-title">
+                  <h3 className="card__content-title">
                     Enhanced data visualization for a leading jewellery
                     insurance company
-                  </a>
+                  </h3>
                   <p className="card__content-description">
                     Enabling near real-time data analysis, automating the ETL
                     process with audit and error tracking, and providing a
@@ -297,10 +297,10 @@ export default function HomePage() {
               </div>
               <div className="card__content-btn">
                 <div className="card__content">
-                  <a className="card__content-title">
+                  <h3 className="card__content-title">
                     Provided superior inventory management for leading
                     shipbuilder in India
-                  </a>
+                  </h3>
                   <p className="card__content-description">
                     Enabling near real-time data analysis, automating the ETL
                     process with audit and error tracking, and providing a
