@@ -29,6 +29,87 @@ import Ella from "../assets/successstory/ella.png";
 export default function HomePage() {
   return (
     <>
+      {/* Hero section */}
+      <section className="hero-section">
+        <div className="container mobile__logo">
+          <Icons icon="datakulture_logo" />
+        </div>
+        <div className="container hero">
+          <div className="hero__content-image">
+            <div className="hero__content-text">
+              <div className="hero-section__title-description">
+                <div className="hero-section__title">
+                  <h1 className="hero-section__title">
+                    Start visualizing your business data with AI-driven insights
+                  </h1>
+                </div>
+                <div className="hero-section__description">
+                  <p>
+                    Make informed decisions, drive growth, and stay ahead of the
+                    competition by harnessing the full potential of your data
+                    with our intuitive and intelligent solution.
+                  </p>
+                </div>
+              </div>
+              <button className="btn btn__primary btn__large hero-section__btn ">
+                Contact us
+              </button>
+            </div>
+            <div className="hero-section__img">
+              <Image
+                className="hero-section__image"
+                src={Herogif}
+                alt="Hero section Image"
+              />
+            </div>
+          </div>
+
+          <div className="client-logo">
+            <Image src={LT} alt="LT Logo" className="client-logo__image" />
+            <Image
+              src={Serum}
+              alt="Serum Logo"
+              className="client-logo__image"
+            />
+            <Image
+              src={TigerAnalytics}
+              alt="Tiger Analytics Logo"
+              className="client-logo__image"
+            />
+            <Image
+              src={TvsCredit}
+              alt="TVS Credit Logo"
+              className="client-logo__image"
+            />
+            <Image
+              src={IndianCements}
+              alt="Indian Cements Logo"
+              className="client-logo__image"
+            />
+            <Image
+              src={Raymond}
+              alt="Raymond Logo"
+              className="client-logo__image"
+            />
+            <Image
+              src={TvsCredit}
+              alt="TVS Credit Logo"
+              className="client-logo__image"
+            />
+            <Image
+              src={IndianCements}
+              alt="Indian Cements Logo"
+              className="client-logo__image"
+            />
+            <Image
+              src={Raymond}
+              alt="Raymond Logo"
+              className="client-logo__image"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Our services */}
       <section className="our-services_section">
         <div className="container our-services">
@@ -297,10 +378,10 @@ export default function HomePage() {
               </div>
               <div className="card__content-btn">
                 <div className="card__content">
-                  <h3 className="card__content-title">
+                  <a className="card__content-title">
                     Provided superior inventory management for leading
                     shipbuilder in India
-                  </h3>
+                  </a>
                   <p className="card__content-description">
                     Enabling near real-time data analysis, automating the ETL
                     process with audit and error tracking, and providing a
@@ -452,132 +533,5 @@ export default function HomePage() {
         </div>
       </section>
     </>
-
-    //   {/* Hero section */}
-    //   <section className="hero-section">
-    //     <div className="hero-section__title-description">
-    //       <div className="hero-section__title">
-    //         <p>Start visualizing your business data with AI-driven insights</p>
-    //       </div>
-    //       <div className="hero-section__description">
-    //         <p>
-    //           Make informed decisions, drive growth, and stay ahead of the
-    //           competition by harnessing the full potential of your data with our
-    //           intuitive and intelligent solution.
-    //         </p>
-    //       </div>
-    //     </div>
-
-    //     <div className="hero-section__btn-image">
-    //       <button className="btn btn__primary btn__large hero-section__button ">
-    //         Contact us
-    //       </button>
-    //       <Image
-    //         className="hero-section__image"
-    //         src={Herogif}
-    //         alt="Hero section Image"
-    //       />
-    //     </div>
-    //     <div className="client-logo">
-    //       <div className="client-logo__slider">
-    //         <div className="client-logo__slider-images">
-    //           <Image src={LT} alt="LT Logo" className="client-logo__image" />
-    //           <Image
-    //             src={Serum}
-    //             alt="Serum Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={TigerAnalytics}
-    //             alt="Tiger Analytics Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={TvsCredit}
-    //             alt="TVS Credit Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={IndianCements}
-    //             alt="Indian Cements Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={Raymond}
-    //             alt="Raymond Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={TvsCredit}
-    //             alt="TVS Credit Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={IndianCements}
-    //             alt="Indian Cements Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={Raymond}
-    //             alt="Raymond Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={Serum}
-    //             alt="Serum Logo"
-    //             className="client-logo__image"
-    //           />
-    //         </div>
-    //         <div className="client-logo__slider-images">
-    //           <Image src={LT} alt="LT Logo" className="client-logo__image" />
-    //           <Image
-    //             src={Serum}
-    //             alt="Serum Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={TigerAnalytics}
-    //             alt="Tiger Analytics Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={TvsCredit}
-    //             alt="TVS Credit Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={IndianCements}
-    //             alt="Indian Cements Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={Raymond}
-    //             alt="Raymond Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={TvsCredit}
-    //             alt="TVS Credit Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={IndianCements}
-    //             alt="Indian Cements Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={Raymond}
-    //             alt="Raymond Logo"
-    //             className="client-logo__image"
-    //           />
-    //           <Image
-    //             src={Serum}
-    //             alt="Serum Logo"
-    //             className="client-logo__image"
-    //           />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </section>
   );
 }
