@@ -21,6 +21,10 @@ import Aws from "../assets/partnerlogo/aws.png";
 import TestimonialPattern from "../assets/gif/testimonalpattern.png";
 import Client from "../assets/clientimg.png";
 import TestimonialHorizontal from "../assets/gif/testimonialhorizontal.png";
+import Transitflow from "../assets/successstory/transitflow.png";
+import Automation from "../assets/successstory/automation.png";
+import Seacraft from "../assets/successstory/seacraft.png";
+import Ella from "../assets/successstory/ella.png";
 
 export default function HomePage() {
   return (
@@ -198,6 +202,124 @@ export default function HomePage() {
             className="technologies__image"
             alt="Technologies GIF"
           />
+        </div>
+      </section>
+
+      {/* Success stories */}
+      <section className="Successstories__section">
+        <div className="container success-stories">
+          <div className="success-stories__content">
+            <h4 className="success-stories__title">OUR SUCCESS STORIES</h4>
+            <h2 className="success-stories__subtitle">
+              Transformative solutions, real-world impact
+            </h2>
+          </div>
+
+          <div className="success-stories__cards">
+            <div className="success-stories__card">
+              <div className="card__img">
+                <Image src={Transitflow} className="card__image" />
+              </div>
+              <div className="card__content-btn">
+                <div className="card__content">
+                  <a className="card__content-title">
+                    Preparing data warehouse for leading third-party logistics
+                    (3PL) provider
+                  </a>
+                  <p className="card__content-description">
+                    Enabling near real-time data analysis, automating the ETL
+                    process with audit and error tracking, and providing a
+                    detailed dashboard.
+                  </p>
+                </div>
+                <div className="card__btn">
+                  <div className="view__btn">
+                    <a className="view__btn-text">View case study</a>
+                    <Icons icon="right_arrow" className="view__btn-icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="success-stories__card">
+              <div className="card__img">
+                <Image src={Automation} className="card__image" />
+              </div>
+              <div className="card__content-btn">
+                <div className="card__content">
+                  <a className="card__content-title">
+                    Helped major tool manufacturer in USA query response time to
+                    be 10x faster
+                  </a>
+                  <p className="card__content-description">
+                    Enabling near real-time data analysis, automating the ETL
+                    process with audit and error tracking, and providing a
+                    detailed dashboard.
+                  </p>
+                </div>
+                <div className="card__btn">
+                  <div className="view__btn">
+                    <a className="view__btn-text">View case study</a>
+                    <Icons icon="right_arrow" className="view__btn-icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="success-stories__card">
+              <div className="card__img">
+                <Image src={Ella} className="card__image" />
+              </div>
+              <div className="card__content-btn">
+                <div className="card__content">
+                  <a className="card__content-title">
+                    Enhanced data visualization for a leading jewellery
+                    insurance company
+                  </a>
+                  <p className="card__content-description">
+                    Enabling near real-time data analysis, automating the ETL
+                    process with audit and error tracking, and providing a
+                    detailed dashboard.
+                  </p>
+                </div>
+                <div className="card__btn">
+                  <div className="view__btn">
+                    <a className="view__btn-text">View case study</a>
+                    <Icons icon="right_arrow" className="view__btn-icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="success-stories__card">
+              <div className="card__img">
+                <Image src={Seacraft} className="card__image" />
+              </div>
+              <div className="card__content-btn">
+                <div className="card__content">
+                  <a className="card__content-title">
+                    Provided superior inventory management for leading
+                    shipbuilder in India
+                  </a>
+                  <p className="card__content-description">
+                    Enabling near real-time data analysis, automating the ETL
+                    process with audit and error tracking, and providing a
+                    detailed dashboard.
+                  </p>
+                </div>
+                <div className="card__btn">
+                  <div className="view__btn">
+                    <a className="view__btn-text">View case study</a>
+                    <Icons icon="right_arrow" className="view__btn-icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button className="btn btn__outlined-black btn__medium load-more-btn">
+            Load more
+          </button>
         </div>
       </section>
 
