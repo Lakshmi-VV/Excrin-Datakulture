@@ -1286,6 +1286,7 @@ body {
   .success-stories {
     padding: 80px 24px;
     gap: 64px;
+    border-bottom: 1px solid var(--Other-Black, #000);
   }
   .success-stories__subtitle {
     font-size: 40px;
