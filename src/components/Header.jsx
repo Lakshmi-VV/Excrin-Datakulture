@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import React from "react";
-import { Icons } from "../assets/Icons";
+import { Icons } from "./Icons.jsx";
+import Link from "next/link.js";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,18 +28,26 @@ function Header() {
             </div>
             <nav className="navbar__menu">
               <div className="navbar__item">
-                <a>Services</a>
+                <Link href="/Services" className="nav__item text-xsmall">
+                  Services
+                </Link>
               </div>
               <div className="navbar__item">
-                <a>Company</a>
+                <Link href="/" className="nav__item text-xsmall">
+                  Company
+                </Link>
               </div>
               <div className="navbar__item">
-                <a>Resources</a>
+                <Link href="/" className="nav__item text-xsmall">
+                  Resources
+                </Link>
               </div>
             </nav>
           </div>
           <div className="header__button">
-            <a className=" btn btn__primary btn__medium">Contact us</a>
+            <Link href="/" className=" btn btn__primary btn__medium">
+              Contact us
+            </Link>
           </div>
         </div>
       </header>
@@ -62,20 +71,28 @@ function Header() {
             <div className="menu__list-btn">
               <ul className="menu__list">
                 <li className="menu__item">
-                  <a className="menu__text">Services</a>
+                  <Link href="/Services" className="menu__text text-medium">
+                    Services
+                  </Link>
                   <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
                 <li className="menu__item">
-                  <a className="menu__text">Company</a>
+                  <Link href="/" className="menu__text text-medium">
+                    Company
+                  </Link>
                   <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
                 <li className="menu__item">
-                  <a className="menu__text">Resources</a>
+                  <Link href="/" className="menu__text text-medium">
+                    Resources
+                  </Link>
                   <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
               </ul>
               <div className="menu__btn">
-                <a className="btn btn__large btn__primary">Contact us</a>
+                <Link href="/" className="btn btn__large btn__primary">
+                  Contact us
+                </Link>
               </div>
             </div>
           </nav>

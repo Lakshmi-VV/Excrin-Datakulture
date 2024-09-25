@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
+import { Icons } from "@/components/Icons";
 
 export const metadata = {
   title: "Datakulture",
@@ -19,6 +20,9 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Header />
+        <div className="container mobile__logo">
+          <Icons icon="datakulture_logo" />
+        </div>
         {children}
         <Footer />
       </body>
