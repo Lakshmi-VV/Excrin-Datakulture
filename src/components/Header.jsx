@@ -18,6 +18,7 @@ function Header() {
       document.body.classList.remove("no-scroll");
     }
   }, [isMenuOpen]);
+
   return (
     <>
       <header className="header">
@@ -28,17 +29,20 @@ function Header() {
             </div>
             <nav className="navbar__menu">
               <div className="navbar__item">
-                <Link href="/Services" className="nav__item text-xsmall">
+                <Link
+                  href="/Services"
+                  className="nav__item text-xsmall text-fw-medium"
+                >
                   Services
                 </Link>
               </div>
               <div className="navbar__item">
-                <Link href="/" className="nav__item text-xsmall">
+                <Link href="/" className="nav__item text-xsmall text-fw-medium">
                   Company
                 </Link>
               </div>
               <div className="navbar__item">
-                <Link href="/" className="nav__item text-xsmall">
+                <Link href="/" className="nav__item text-xsmall text-fw-medium">
                   Resources
                 </Link>
               </div>
@@ -71,19 +75,28 @@ function Header() {
             <div className="menu__list-btn">
               <ul className="menu__list">
                 <li className="menu__item">
-                  <Link href="/Services" className="menu__text text-medium">
+                  <Link
+                    href="/Services"
+                    className="menu__text text-medium text-fw-medium"
+                  >
                     Services
                   </Link>
                   <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
-                <li className="menu__item">
-                  <Link href="/" className="menu__text text-medium">
+                <li className="menu__item ">
+                  <Link
+                    href="/"
+                    className="menu__text text-medium text-fw-medium"
+                  >
                     Company
                   </Link>
                   <Icons icon="menu_arrow_right" className="menu__icon" />
                 </li>
                 <li className="menu__item">
-                  <Link href="/" className="menu__text text-medium">
+                  <Link
+                    href="/"
+                    className="menu__text text-medium  text-fw-medium"
+                  >
                     Resources
                   </Link>
                   <Icons icon="menu_arrow_right" className="menu__icon" />

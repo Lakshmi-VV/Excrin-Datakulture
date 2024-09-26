@@ -55,11 +55,11 @@ export default function HomePage() {
             <div className="hero__content-text">
               <div className="hero-section__title-description">
                 <div className="hero-section__title">
-                  <h1 className="hero-section__title text-large ">
+                  <h1 className="hero-section__title text-large  text-fw-medium">
                     Start visualizing your business data with AI-driven insights
                   </h1>
                 </div>
-                <div className="hero-section__description text-small ">
+                <div className="hero-section__description text-small  text-fw-regular">
                   <p>
                     Make informed decisions, drive growth, and stay ahead of the
                     competition by harnessing the full potential of your data
@@ -137,10 +137,10 @@ export default function HomePage() {
       <section className="technologies__section">
         <div className="container technologies">
           <div className="technologies__content">
-            <h4 className="technologies__title text-xsmall">
+            <h4 className="technologies__title text-xsmall  text-fw-regular">
               OUR TECHNOLOGIES
             </h4>
-            <h2 className="technologies__description text-large">
+            <h2 className="technologies__description text-large  text-fw-medium">
               Empowering Innovations with leading-edge technologies
             </h2>
           </div>

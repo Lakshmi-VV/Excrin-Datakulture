@@ -11,7 +11,7 @@ function Footer() {
             <div className="footer__about">
               <div className="footer__logo-description">
                 <Icons icon="datakulture_logo" className="footer__logo" />
-                <p className="footer__description text-xsmall">
+                <p className="footer__description text-xsmall  text-fw-regular">
                   The fastest and simple way to generate growing business
                   solutions with our products.
                 </p>
@@ -33,7 +33,9 @@ function Footer() {
             </div>
             <div className="footer__services-company-resources">
               <div className="footer__services">
-                <h4 className="footer__heading text-h4 ">Services</h4>
+                <h4 className="footer__heading text-h4 text-fw-semibold">
+                  Services
+                </h4>
                 <ul className="footer__list-item">
                   <li>
                     <Link href="/" className="footer__item">
@@ -58,7 +60,9 @@ function Footer() {
                 </ul>
               </div>
               <div className="footer__company">
-                <h4 className="footer__heading text-h4">Company</h4>
+                <h4 className="footer__heading text-h4 text-fw-semibold">
+                  Company
+                </h4>
                 <ul className="footer__list-item">
                   <li>
                     <Link href="/" className="footer__item">
@@ -83,7 +87,9 @@ function Footer() {
                 </ul>
               </div>
               <div className="footer__resources">
-                <h4 className="footer__heading text-h4">Resources</h4>
+                <h4 className="footer__heading text-h4 text-fw-semibold">
+                  Resources
+                </h4>
                 <ul className="footer__list-item">
                   <li>
                     <Link href="/" className="footer__item">
@@ -101,10 +107,10 @@ function Footer() {
           </div>
         </div>
         <div className="container footer__bottom">
-          <p className="footer__bottom-text text-xsmall">
+          <p className="footer__bottom-text text-xsmall text-fw-regular">
             © 2023 Datakulture. All Rights Reserved.
           </p>
-          <p className="footer__bottom-text text-xsmall">
+          <p className="footer__bottom-text text-xsmall text-fw-regular">
             Datakulture is a division of Sedin Technologies
           </p>
         </div>

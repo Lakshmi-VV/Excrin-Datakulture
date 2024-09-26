@@ -10,10 +10,10 @@ function Ctasection() {
         <div className="container cta-container">
           <div className="cta-section__content-btn">
             <div className="cta-section__content">
-              <h2 className="cta-section__title text-large">
+              <h2 className="cta-section__title text-large  text-fw-medium">
                 {`Let's build your data culture together`}
               </h2>
-              <p className="cta-section__description text-small">
+              <p className="cta-section__description text-small  text-fw-regular">
                 Talk to a Datakulture consultant today.
               </p>
             </div>

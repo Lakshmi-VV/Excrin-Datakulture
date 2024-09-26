@@ -8,6 +8,11 @@ import { Icons } from "@/components/Icons";
 import Hero from "@/assets/images/gif/herosection_services.png";
 import Ctabanner from "@/components/Ctabanner";
 import servicecta from "@/assets/images/ctabanner/ctabanner_services.png";
+import Dataconsultation from "@/assets/images/services/dataconsultation.png";
+import Dataengineering from "@/assets/images/services/dataengineering.png";
+import Datascience from "@/assets/images/services/datascience.png";
+import Datavisualization from "@/assets/images/services/datavisualization.png";
+import Link from "next/link";
 
 function Services() {
   const accordions = [
@@ -26,6 +31,70 @@ function Services() {
     {
       question:
         "How can your AI systems help make smarter decisions for my business?",
+    },
+  ];
+  const services = [
+    "Data engineering ",
+    "Data consulting",
+    "Data visualization",
+    "Data science",
+  ];
+  const servicesgrp = [
+    {
+      imgSrc: Dataengineering,
+      title: "Data Engineering",
+      subservices: [
+        "Data discovery",
+        "Data architecture",
+        "Data modeling",
+        "Data profiling",
+        "Data pipeline",
+        "Data LakeHouse",
+        "Data warehouse modernization",
+        "Data governance",
+      ],
+      description:
+        "Data engineering services involve the design, development, deployment, and maintenance of data infrastructure and systems to support the processing, storage, and analysis of large volumes of data. Data consulting services may cover a wide range of areas, including data governance, data quality management, data integration, data analytics, and data visualization.",
+    },
+    {
+      imgSrc: Dataconsultation,
+      title: "Data consulting",
+      subservices: [
+        "Data strategy assessment",
+        "Data maturity model",
+        "Data science readiness",
+        "Data framework",
+        "Data & analytics roadmap",
+        "Partnership for training& innovation",
+      ],
+      description:
+        "Data consulting services provide expert advice and guidance to organizations on how to leverage their data assets for better decision-making and business outcomes.Data consulting services may cover a wide range of areas, including data governance, data quality management, data integration, data analytics, and data visualization.",
+    },
+    {
+      imgSrc: Datavisualization,
+      title: "Data visualization",
+      subservices: [
+        "UX-driven data visualization",
+        "Metrics that matter",
+        "Data-driven storytelling",
+        "Modernizing data visualization strategies",
+        "Tailored embedded solutions",
+      ],
+      description:
+        "Data engineering services involve the design, development, deployment, and maintenance of data infrastructure and systems to support the processing, storage, and analysis of large volumes of data. Data consulting services may cover a wide range of areas, including data governance, data quality management, data integration, data analytics, and data visualization.",
+    },
+    {
+      imgSrc: Datascience,
+      title: "Data science",
+      subservices: [
+        "Machine learning",
+        "Decision sciences",
+        "MLops",
+        "Deep learning",
+        "Generative AI",
+      ],
+      description:
+        "Data science services involve the use of advanced analytics and machine learning techniques to extract insights and knowledge from data.Data science services may include data exploration and visualization, predictive modeling, statistical analysis, natural language processing, and deep learning.",
     },
   ];
   return (
@@ -52,11 +121,75 @@ function Services() {
       </section>
 
       {/* List of services */}
-      <section className="service-list">
+      <section className="service-list-section">
         <div className="container service__list">
-          <div>
-            <div></div>
-            <div></div>
+          <div className="service__list-navigation-servicegrp">
+            <div className="service__list-navigation-sticky">
+              <div className="service__list-navigation">
+                {services.map((service) => {
+                  return (
+                    <>
+                      <Link
+                        href="/"
+                        className="service__list-navtext text-xsmall text-fw-regular"
+                      >
+                        {service}
+                      </Link>
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="service__list-servicegrp">
+              {servicesgrp.map((singleservice, index) => {
+                return (
+                  <>
+                    <div className="singleservice__content">
+                      <div className="singleservice__title-image">
+                        <div className="singleservice-image">
+                          <Image
+                            src={singleservice.imgSrc}
+                            className="singleservice-img"
+                          />
+                        </div>
+                        <div className="singleservice-title text-fw-medium text-h2">
+                          {singleservice.title}
+                        </div>
+                      </div>
+                      <div className="singleservice-subservices">
+                        {singleservice.subservices.map((service) => {
+                          return (
+                            <>
+                              <div className="singleservice-subservice">
+                                <Link
+                                  href="/"
+                                  className="singleservice-subservice__text text-fw-medium text-xxsmall"
+                                >
+                                  {service}
+                                </Link>
+                              </div>
+                            </>
+                          );
+                        })}
+                      </div>
+                      <div className="singleservice-description text-small text-fw-regular">
+                        <p>{singleservice.description}</p>
+                      </div>
+                      <div className="singleservice-btn">
+                        <button className="btn btn__primary btn__medium">
+                          Learn more
+                        </button>
+                      </div>
+                    </div>
+
+                    {index !== servicesgrp.length - 1 && (
+                      <div className="horizontal-line"></div>
+                    )}
+                  </>
+                );
+              })}
+            </div>
           </div>
           <Ctabanner imgSrc={servicecta} />
         </div>

@@ -29,10 +29,12 @@ function Whydk({ subtitle, imageSrc }) {
       <section className="why-datakulture__section">
         <div className="container why-datakulture">
           <div className="why-datakulture__header">
-            <h4 className="why-datakulture__title text-xsmall">
+            <h4 className="why-datakulture__title text-xsmall text-fw-regular">
               WHY DATAKULTURE
             </h4>
-            <h2 className="why-datakulture__subtitle text-large">{subtitle}</h2>
+            <h2 className="why-datakulture__subtitle text-large text-fw-medium">
+              {subtitle}
+            </h2>
           </div>
           <div className="why-datakulture__content">
             <Image
@@ -45,16 +47,16 @@ function Whydk({ subtitle, imageSrc }) {
                 return (
                   <>
                     <div className="why-datakulture__feature">
-                      <h3 className="why-datakulture__feature-title text-h3">
+                      <h3 className="why-datakulture__feature-title text-h3 text-fw-medium">
                         {feature.title}
                       </h3>
-                      <p className="why-datakulture__feature-description text-xsmall">
+                      <p className="why-datakulture__feature-description text-xsmall text-fw-regular">
                         {feature.description}
                       </p>
                       <div className="learn-more__btn">
                         <Link
                           href="/"
-                          className="learn-more__btn-text text-small"
+                          className="learn-more__btn-text text-small text-fw-medium"
                         >
                           Learn more
                         </Link>

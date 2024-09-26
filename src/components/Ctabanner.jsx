@@ -4,8 +4,8 @@ import Image from "next/image";
 function Ctabanner({ imgSrc }) {
   return (
     <>
-      <section className="ctabanner-section">
-        <div className="container ctabanner">
+      <section className="ctabanner-section ">
+        <div className=" ctabanner">
           <div className="ctabanner__content-btn">
             <div className="ctabanner__content">
               <h2 className="ctabanner__title">
