@@ -55,7 +55,7 @@ function Testimonial() {
   return (
     <>
       <section className="testimonial__section">
-        <div className="container testimonial">
+        {/* <div className="container testimonial">
           <div className="testimonial__content">
             <div className="testimonial__title-arrows">
               <div className="testimonial__title-description">
@@ -166,7 +166,7 @@ function Testimonial() {
               })}
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
       ;
     </>

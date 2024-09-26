@@ -1608,8 +1608,14 @@ body {
     width: 100%;
     text-align: center;
   }
+  .ctabanner-section {
+    width: 100%;
+  }
 }
 @media ((min-width: 769px) and (max-width: 1023px)) {
+  .ctabanner-section {
+    width: 100%;
+  }
   .ctabanner {
     padding: 48px 16px;
     gap: 24px;
@@ -1737,6 +1743,9 @@ body {
   }
   .service__list-servicegrp {
     gap: 64px;
+  }
+  .service__list-navigation-servicegrp {
+    gap: 0px;
   }
   .singleservice__title-image {
     flex-direction: column;
