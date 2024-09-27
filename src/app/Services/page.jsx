@@ -13,6 +13,7 @@ import Dataengineering from "@/assets/images/services/dataengineering.png";
 import Datascience from "@/assets/images/services/datascience.png";
 import Datavisualization from "@/assets/images/services/datavisualization.png";
 import Link from "next/link";
+import Clientlogoslider from "@/components/Clientlogoslider";
 
 function Services() {
   const accordions = [
@@ -116,7 +117,9 @@ function Services() {
               <Image src={Hero} loading="eager" className="service__hero-img" />
             </div>
           </div>
-          <div className="client--logo"></div>
+          <div className=" clientlogo-slider">
+            <Clientlogoslider />
+          </div>
         </div>
       </section>
 
@@ -153,8 +156,10 @@ function Services() {
                             className="singleservice-img"
                           />
                         </div>
-                        <div className="singleservice-title text-fw-medium text-h2">
-                          {singleservice.title}
+                        <div>
+                          <h3 className="singleservice-title text-fw-medium text-h2">
+                            {singleservice.title}
+                          </h3>
                         </div>
                       </div>
                       <div className="singleservice-subservices">

@@ -78,6 +78,7 @@ function Header() {
                   <Link
                     href="/Services"
                     className="menu__text text-medium text-fw-medium"
+                    onClick={handleToggle}
                   >
                     Services
                   </Link>

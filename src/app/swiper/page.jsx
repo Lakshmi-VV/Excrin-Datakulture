@@ -16,25 +16,6 @@ import Client2 from "@/assets/images/clientimg/client2.png";
 import TestimonialHorizontal from "@/assets/images/gif/testimonialhorizontal.png";
 
 const Swipertest = () => {
-  const partners = [
-    {
-      imgSrc: Gold,
-      name: "Microsoft-Gold-Partner",
-    },
-    {
-      imgSrc: Tableau,
-      name: "Tableau-partner",
-    },
-    {
-      imgSrc: Aws,
-      name: "Aws-partner",
-    },
-    {
-      imgSrc: Azure,
-      name: "Azure-partner",
-    },
-  ];
-
   const clientReview = [
     {
       imgSrc: Client1,

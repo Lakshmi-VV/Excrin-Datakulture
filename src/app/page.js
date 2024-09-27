@@ -6,18 +6,13 @@ import Ctasection from "@/components/Ctasection.jsx";
 import Whydk from "@/components/Whydk.jsx";
 import Successstories from "@/components/Successstories.jsx";
 import Herogif from "../assets/images/gif/herosection.png";
-import LT from "../assets/images/clientlogo/lt_logo.png";
-import Raymond from "../assets/images/clientlogo/raymond_logo.png";
-import Serum from "../assets/images/clientlogo/serum_institute_logo.png";
-import IndianCements from "../assets/images/clientlogo/the_india_cements_logo.png";
-import TigerAnalytics from "../assets/images/clientlogo/tiger_analytics_logo.png";
-import TvsCredit from "../assets/images/clientlogo/tvs_credit_logo.png";
 import Technologiesgif from "../assets/images/gif/technologies.png";
 import Dataconsultation from "../assets/images/services/dataconsultation.png";
 import Dataengineering from "../assets/images/services/dataengineering.png";
 import Datascience from "../assets/images/services/datascience.png";
 import Datavisualization from "../assets/images/services/datavisualization.png";
 import Whydatakulture from "../assets/images/gif/whydatakulture.png";
+import Clientlogoslider from "@/components/Clientlogoslider";
 
 export default function HomePage() {
   const ourServices = [
@@ -80,7 +75,9 @@ export default function HomePage() {
               />
             </div>
           </div>
-          <div className="client--logo"></div>
+          <div className=" clientlogo-slider">
+            <Clientlogoslider />
+          </div>
         </div>
       </section>
 

@@ -55,7 +55,124 @@ function Testimonial() {
   return (
     <>
       <section className="testimonial__section">
-        {/* <div className="container testimonial">
+        <div className="container testimonial">
+          <div className="testimonial__content">
+            <div className="testimonial__title-arrows">
+              <div className="testimonial__title-description">
+                <h4 className="testimonial__title">CLIENT VOICES</h4>
+                <h2 className="testimonial__description">
+                  Partnerships that speak success
+                </h2>
+              </div>
+              <div className="testimonial__arrows">
+                <Link
+                  href="/"
+                  className="testimonial__arrow testimonial__arrow-prev"
+                >
+                  <Icons icon="left_arrow" width={24} height={24} />
+                </Link>
+                <Link
+                  href="/"
+                  className="testimonial__arrow testimonial__arrow-next"
+                >
+                  <Icons icon="right_arrow" width={24} height={24} />
+                </Link>
+              </div>
+            </div>
+            <div className="testimonial__content-text">
+              <div className="testimonial__img">
+                <Image
+                  src={TestimonialPattern}
+                  alt="TestimonialPattern"
+                  className="testimonial__image"
+                />
+                <Image
+                  src={TestimonialHorizontal}
+                  alt="TestimonialHorizontal pattern"
+                  className="testimonialHorizontal__image"
+                />
+              </div>
+
+              <Swiper
+                slidesPerView={"auto"}
+                loop={true}
+                modules={[Navigation]}
+                navigation={{
+                  nextEl: ".testimonial__arrow-next",
+                  prevEl: ".testimonial__arrow-prev",
+                }}
+              >
+                {clientReview.map((client, index) => {
+                  return (
+                    <SwiperSlide>
+                      <div className="testimonial__client-text">
+                        <div>
+                          <p className="client__review">{client.review}</p>
+                        </div>
+                        <div className="client__info">
+                          <Image
+                            src={client.imgSrc}
+                            alt="client image"
+                            className="client_image"
+                          />
+                          <div className="client__name-company">
+                            <p className="client-name">{client.clientName}</p>
+                            <p className="client-company">{client.company}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+
+              <div className="testimonal__arrows-mob">
+                <Link
+                  href="/"
+                  className="testimonial__arrow testimonial__arrow-prev"
+                >
+                  <Icons icon="left_arrow" width={24} height={24} />
+                </Link>
+                <Link
+                  href="/"
+                  className="testimonial__arrow testimonial__arrow-next "
+                >
+                  <Icons icon="right_arrow" width={24} height={24} />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="partnership">
+            <div className="partnership__text">
+              <p>We have Implemented 250+ Projects in Partnership with</p>
+            </div>
+            <div className="partners">
+              {partners.map((partner) => {
+                return (
+                  <>
+                    <div className="partner">
+                      <Image
+                        src={partner.imgSrc}
+                        className={`${partner.name}`}
+                        alt={`${partner.name}`}
+                      />
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default Testimonial;
+
+{
+  /* <section className="testimonial__section">
+        <div className="container testimonial">
           <div className="testimonial__content">
             <div className="testimonial__title-arrows">
               <div className="testimonial__title-description">
@@ -122,14 +239,20 @@ function Testimonial() {
                             </div>
 
                             <div className="testimonal__arrows-mob">
-                              <Link href="/" className="testimonial__arrow ">
+                              <Link
+                                href="/"
+                                className="testimonial__arrow testimonial__arrow-prev"
+                              >
                                 <Icons
                                   icon="left_arrow"
                                   width={24}
                                   height={24}
                                 />
                               </Link>
-                              <Link href="/" className="testimonial__arrow ">
+                              <Link
+                                href="/"
+                                className="testimonial__arrow testimonial__arrow-next "
+                              >
                                 <Icons
                                   icon="right_arrow"
                                   width={24}
@@ -166,11 +289,6 @@ function Testimonial() {
               })}
             </div>
           </div>
-        </div> */}
-      </section>
-      ;
-    </>
-  );
+        </div>
+      </section> */
 }
-
-export default Testimonial;

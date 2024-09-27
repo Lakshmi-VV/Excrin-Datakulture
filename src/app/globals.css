@@ -295,6 +295,7 @@ body {
     width: 100%;
     z-index: 1;
     background-color: var(--White);
+    z-index: 2;
   }
   .menu__btn .btn {
     width: 100%;
@@ -311,6 +312,7 @@ body {
     width: 100%;
     z-index: 1;
     background-color: var(--White);
+    z-index: 2;
   }
   .menu__list-btn {
     display: flex;
@@ -911,6 +913,7 @@ body {
   align-items: flex-start;
   gap: 64px;
   padding: 0px 56px;
+  width: 100%;
 }
 .testimonial__title-arrows {
   width: 100%;
@@ -1176,6 +1179,60 @@ body {
   }
 }
 @media ((min-width: 769px) and (max-width: 1023px)) {
+  .testimonial__description {
+    text-align: left;
+  }
+  .testimonial__content-text {
+    flex-direction: column;
+  }
+  .testimonial__image {
+    display: none;
+  }
+  .testimonialHorizontal__image {
+    display: block;
+    width: 175px;
+    height: 32px;
+  }
+  .testimonial__client-text {
+    gap: 32px;
+  }
+  .client__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .client__review {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .client-name {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .client-company {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .testimonal__arrows-mob {
+    display: block;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .testimonal__arrows-mob a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 0px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .testimonial__arrows {
+    display: none;
+  }
+  .testimonial__image {
+    display: none;
+  }
   .testimonial {
     padding: 80px 0px;
     gap: 80px;
@@ -1184,9 +1241,6 @@ body {
     padding: 0px 24px;
     width: 100%;
   }
-  .client__review {
-    font-size: 24px;
-  }
   .partners {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1194,9 +1248,6 @@ body {
     row-gap: 16px;
     justify-items: center;
     width: 100%;
-  }
-  .testimonial__description {
-    text-align: left;
   }
 }
 
@@ -1756,5 +1807,32 @@ body {
 @media ((min-width: 769px) and (max-width: 1023px)) {
   .service__list {
     padding: 80px 24px;
+  }
+}
+
+/*client logo slider*/
+.hero-section {
+  overflow: hidden;
+}
+.client-logo__slider {
+  padding-left: 56px;
+}
+.client-logo__slider .swiper-slide {
+  width: 100px !important;
+}
+.client-logo__slider .swiper-wrapper {
+  width: 100vw !important;
+}
+.client-logo__slider .swiper-pagination {
+  visibility: hidden;
+}
+@media (max-width: 768px) {
+  .client-logo__slider {
+    padding-left: 24px;
+  }
+}
+@media ((min-width: 769px) and (max-width: 1023px)) {
+  .client-logo__slider {
+    padding-left: 24px;
   }
 }
