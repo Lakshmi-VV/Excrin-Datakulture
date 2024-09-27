@@ -114,7 +114,12 @@ function Services() {
               </p>
             </div>
             <div className="service__hero-image">
-              <Image src={Hero} loading="eager" className="service__hero-img" />
+              <Image
+                src={Hero}
+                loading="eager"
+                className="service__hero-img"
+                alt="service-hero image"
+              />
             </div>
           </div>
           <div className=" clientlogo-slider">
@@ -154,6 +159,7 @@ function Services() {
                           <Image
                             src={singleservice.imgSrc}
                             className="singleservice-img"
+                            alt={singleservice.title}
                           />
                         </div>
                         <div>

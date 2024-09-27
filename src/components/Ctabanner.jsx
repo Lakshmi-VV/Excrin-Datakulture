@@ -23,7 +23,11 @@ function Ctabanner({ imgSrc }) {
             </div>
           </div>
           <div className="ctabanner__image">
-            <Image src={imgSrc} className="ctabanner__img" />
+            <Image
+              src={imgSrc}
+              className="ctabanner__img"
+              alt="ctabanner image"
+            />
           </div>
         </div>
       </section>

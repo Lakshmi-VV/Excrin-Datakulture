@@ -62,9 +62,9 @@ function Clientlogoslider() {
         modules={[Pagination]}
         loop={true}
       >
-        {clientLogo.map((logo) => {
+        {clientLogo.map((logo, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <div className="client-logo__img">
                 <Image
                   src={logo.imgSrc}

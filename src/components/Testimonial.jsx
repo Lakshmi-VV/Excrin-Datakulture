@@ -104,7 +104,7 @@ function Testimonial() {
               >
                 {clientReview.map((client, index) => {
                   return (
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                       <div className="testimonial__client-text">
                         <div>
                           <p className="client__review">{client.review}</p>
