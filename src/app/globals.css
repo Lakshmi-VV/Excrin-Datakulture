@@ -1863,6 +1863,11 @@ html {
   gap: 147px;
   align-self: stretch;
 }
+.servicebenefits__heading-sticky {
+  width: 420px;
+  position: sticky;
+  top: 100px;
+}
 .servicebenefits__heading {
   display: flex;
   width: 420px;
@@ -1947,11 +1952,17 @@ html {
   .servicebenefits-section {
     border-bottom: 1px solid var(--Black);
   }
+  .servicebenefits__heading-sticky {
+    position: static;
+  }
 }
 @media ((min-width: 769px) and (max-width: 1023px)) {
   .servicebenefits {
     padding: 80px 24px;
     gap: 90px;
+  }
+  .servicebenefits__heading {
+    width: fit-content;
   }
 }
 

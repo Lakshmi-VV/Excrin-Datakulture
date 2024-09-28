@@ -104,14 +104,17 @@ function singleService({ params }) {
       {/* Service benefits */}
       <section className="servicebenefits-section">
         <div className="container servicebenefits">
-          <div className="servicebenefits__heading">
-            <h4 className="servicebenefits__title text-xsmall text-fw-regular">
-              BENEFITS
-            </h4>
-            <h2 className="servicebenefits__subtitle text-large text-fw-medium">
-              How you can drive maximum value work with data.
-            </h2>
+          <div className="servicebenefits__heading-sticky">
+            <div className="servicebenefits__heading">
+              <h4 className="servicebenefits__title text-xsmall text-fw-regular">
+                BENEFITS
+              </h4>
+              <h2 className="servicebenefits__subtitle text-large text-fw-medium">
+                How you can drive maximum value work with data.
+              </h2>
+            </div>
           </div>
+
           <div className="servicebenefits__content-line">
             {benefits.map((benefit, index) => {
               return (
