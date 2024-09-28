@@ -1,3 +1,4 @@
+"use client";
 import Successstories from "@/components/Successstories";
 import Whydk from "@/components/Whydk";
 import React from "react";
@@ -14,34 +15,15 @@ import Datascience from "@/assets/images/services/datascience.png";
 import Datavisualization from "@/assets/images/services/datavisualization.png";
 import Link from "next/link";
 import Clientlogoslider from "@/components/Clientlogoslider";
+import { useRouter } from "next/navigation";
+import Servicefaq from "@/components/Servicefaq";
 
 function Services() {
-  const accordions = [
-    {
-      question: "How do you use language processing to understand data?",
-    },
-    {
-      question: "What kind of data can you analyze with your tools?",
-    },
-    {
-      question: "How does a centralized data lake make analytics better?",
-    },
-    {
-      question: "What does your ETL accelerator framework do?",
-    },
-    {
-      question:
-        "How can your AI systems help make smarter decisions for my business?",
-    },
-  ];
-  const services = [
-    "Data engineering ",
-    "Data consulting",
-    "Data visualization",
-    "Data science",
-  ];
+  const router = useRouter();
+
   const servicesgrp = [
     {
+      id: "data-engineering",
       imgSrc: Dataengineering,
       title: "Data Engineering",
       subservices: [
@@ -58,6 +40,7 @@ function Services() {
         "Data engineering services involve the design, development, deployment, and maintenance of data infrastructure and systems to support the processing, storage, and analysis of large volumes of data. Data consulting services may cover a wide range of areas, including data governance, data quality management, data integration, data analytics, and data visualization.",
     },
     {
+      id: "data-consulting",
       imgSrc: Dataconsultation,
       title: "Data consulting",
       subservices: [
@@ -72,6 +55,7 @@ function Services() {
         "Data consulting services provide expert advice and guidance to organizations on how to leverage their data assets for better decision-making and business outcomes.Data consulting services may cover a wide range of areas, including data governance, data quality management, data integration, data analytics, and data visualization.",
     },
     {
+      id: "data-visualization",
       imgSrc: Datavisualization,
       title: "Data visualization",
       subservices: [
@@ -85,6 +69,7 @@ function Services() {
         "Data engineering services involve the design, development, deployment, and maintenance of data infrastructure and systems to support the processing, storage, and analysis of large volumes of data. Data consulting services may cover a wide range of areas, including data governance, data quality management, data integration, data analytics, and data visualization.",
     },
     {
+      id: "data-science",
       imgSrc: Datascience,
       title: "Data science",
       subservices: [
@@ -134,16 +119,19 @@ function Services() {
           <div className="service__list-navigation-servicegrp">
             <div className="service__list-navigation-sticky">
               <div className="service__list-navigation">
-                {services.map((service) => {
+                {servicesgrp.map((service, index) => {
                   return (
-                    <>
-                      <Link
-                        href="/"
-                        className="service__list-navtext text-xsmall text-fw-regular"
-                      >
-                        {service}
-                      </Link>
-                    </>
+                    <div
+                      key={index}
+                      className="service__list-navtext text-xsmall text-fw-regular"
+                      onClick={() => {
+                        document
+                          .getElementById(`service-${index}`)
+                          .scrollIntoView({ behavior: "smooth" });
+                      }}
+                    >
+                      {service.title}
+                    </div>
                   );
                 })}
               </div>
@@ -153,7 +141,10 @@ function Services() {
               {servicesgrp.map((singleservice, index) => {
                 return (
                   <>
-                    <div className="singleservice__content">
+                    <div
+                      className="singleservice__content"
+                      id={`service-${index}`}
+                    >
                       <div className="singleservice__title-image">
                         <div className="singleservice-image">
                           <Image
@@ -188,9 +179,20 @@ function Services() {
                         <p>{singleservice.description}</p>
                       </div>
                       <div className="singleservice-btn">
-                        <button className="btn btn__primary btn__medium">
+                        {/* <button
+                          className="btn btn__primary btn__medium"
+                          onClick={() =>
+                            router.push(`/services/${singleservice.id}`)
+                          }
+                        >
                           Learn more
-                        </button>
+                        </button> */}
+                        <Link
+                          className="btn btn__primary btn__medium"
+                          href={`/services/${singleservice.id}`}
+                        >
+                          Learn more
+                        </Link>
                       </div>
                     </div>
 
@@ -209,35 +211,7 @@ function Services() {
       <Whydk subtitle="Advanced domain expertise" imageSrc={WhydkServices} />
       <Successstories slicenum="2" />
 
-      {/* Services FAQ */}
-      <section className="service-faq__service">
-        <div className="container service-faq">
-          <div className="service-faq__content">
-            <h4 className="service-faq__title">FAQs</h4>
-            <h2 className="service-faq__subtitle">
-              Clear answers to your complex questions
-            </h2>
-          </div>
-          <div className="service-faq__accordions">
-            {accordions.map((accordion) => {
-              return (
-                <>
-                  <div className="service-faq__accordion">
-                    <div className="service-faq__accordian-question">
-                      <div className="accordian__question">
-                        {accordion.question}
-                      </div>
-                      <div className="down__arrow">
-                        <Icons icon="down_arrow" />
-                      </div>
-                    </div>
-                  </div>
-                </>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <Servicefaq />
 
       <Ctasection />
     </>

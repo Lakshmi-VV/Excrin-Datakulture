@@ -30,7 +30,7 @@ function Header() {
             <nav className="navbar__menu">
               <div className="navbar__item">
                 <Link
-                  href="/Services"
+                  href="/services"
                   className="nav__item text-xsmall text-fw-medium"
                 >
                   Services
@@ -76,7 +76,7 @@ function Header() {
               <ul className="menu__list">
                 <li className="menu__item">
                   <Link
-                    href="/Services"
+                    href="/services"
                     className="menu__text text-medium text-fw-medium"
                     onClick={handleToggle}
                   >
