@@ -1,7 +1,7 @@
 "use client";
 import Successstories from "@/components/Successstories";
 import Whydk from "@/components/Whydk";
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import WhydkServices from "@/assets/images/gif/whydk_services.png";
 import Ctasection from "@/components/Ctasection";
@@ -20,6 +20,8 @@ import Servicefaq from "@/components/Servicefaq";
 
 function Services() {
   const router = useRouter();
+  const [activeService, setActiveService] = useState();
+  const services = useRef([]);
 
   const servicesgrp = [
     {
@@ -83,6 +85,23 @@ function Services() {
         "Data science services involve the use of advanced analytics and machine learning techniques to extract insights and knowledge from data.Data science services may include data exploration and visualization, predictive modeling, statistical analysis, natural language processing, and deep learning.",
     },
   ];
+
+  useEffect(() => {
+    const allServices = document.querySelectorAll(".singleservice__content");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveService(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    allServices.forEach((service) => observer.observe(service));
+  }, []);
+
   return (
     <>
       {/* Service hero section */}
@@ -123,7 +142,9 @@ function Services() {
                   return (
                     <div
                       key={index}
-                      className="service__list-navtext text-xsmall text-fw-regular"
+                      className={`service__list-navtext text-xsmall text-fw-regular ${
+                        activeService === `service-${index}` ? "active" : ""
+                      }`}
                       onClick={() => {
                         document
                           .getElementById(`service-${index}`)
@@ -144,6 +165,8 @@ function Services() {
                     <div
                       className="singleservice__content"
                       id={`service-${index}`}
+                      ref={(el) => (services.current[index] = el)}
+                      key={index}
                     >
                       <div className="singleservice__title-image">
                         <div className="singleservice-image">

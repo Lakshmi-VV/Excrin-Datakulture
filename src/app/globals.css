@@ -1795,11 +1795,11 @@ html {
 .service__list-navtext:hover {
   cursor: pointer;
 }
-/* .service__list-navtext .highlight {
+.service__list-navtext.active {
   border-top: 1px solid var(--Black);
   border-right: 1px solid var(--Black);
   border-bottom: 1px solid var(--Black);
-} */
+}
 @media (max-width: 768px) {
   .service-list-section {
     border-bottom: 1px solid var(--Black);
@@ -1954,6 +1954,7 @@ html {
   }
   .servicebenefits__heading-sticky {
     position: static;
+    width: 100%;
   }
 }
 @media ((min-width: 769px) and (max-width: 1023px)) {
