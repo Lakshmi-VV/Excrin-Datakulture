@@ -12,7 +12,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icons } from "@/components/Icons";
 
-function singleService({ params }) {
+function SingleService({ params }) {
   const slug = params.slug;
   const service = servicesdata.find((service) => service.slug === slug);
 
@@ -315,4 +315,4 @@ function singleService({ params }) {
   );
 }
 
-export default singleService;
+export default SingleService;
