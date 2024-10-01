@@ -15,17 +15,15 @@ import Datascience from "@/assets/images/services/datascience.png";
 import Datavisualization from "@/assets/images/services/datavisualization.png";
 import Link from "next/link";
 import Clientlogoslider from "@/components/Clientlogoslider";
-import { useRouter } from "next/navigation";
 import Servicefaq from "@/components/Servicefaq";
 
 function Services() {
-  const router = useRouter();
   const [activeService, setActiveService] = useState();
   const services = useRef([]);
 
   const servicesgrp = [
     {
-      id: "data-engineering",
+      slug: "data-engineering",
       imgSrc: Dataengineering,
       title: "Data Engineering",
       subservices: [
@@ -42,7 +40,7 @@ function Services() {
         "Data engineering services involve the design, development, deployment, and maintenance of data infrastructure and systems to support the processing, storage, and analysis of large volumes of data. Data consulting services may cover a wide range of areas, including data governance, data quality management, data integration, data analytics, and data visualization.",
     },
     {
-      id: "data-consulting",
+      slug: "data-consulting",
       imgSrc: Dataconsultation,
       title: "Data consulting",
       subservices: [
@@ -57,7 +55,7 @@ function Services() {
         "Data consulting services provide expert advice and guidance to organizations on how to leverage their data assets for better decision-making and business outcomes.Data consulting services may cover a wide range of areas, including data governance, data quality management, data integration, data analytics, and data visualization.",
     },
     {
-      id: "data-visualization",
+      slug: "data-visualization",
       imgSrc: Datavisualization,
       title: "Data visualization",
       subservices: [
@@ -71,7 +69,7 @@ function Services() {
         "Data engineering services involve the design, development, deployment, and maintenance of data infrastructure and systems to support the processing, storage, and analysis of large volumes of data. Data consulting services may cover a wide range of areas, including data governance, data quality management, data integration, data analytics, and data visualization.",
     },
     {
-      id: "data-science",
+      slug: "data-science",
       imgSrc: Datascience,
       title: "Data science",
       subservices: [
@@ -97,7 +95,7 @@ function Services() {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 1 }
     );
     allServices.forEach((service) => observer.observe(service));
   }, []);
@@ -202,17 +200,9 @@ function Services() {
                         <p>{singleservice.description}</p>
                       </div>
                       <div className="singleservice-btn">
-                        {/* <button
-                          className="btn btn__primary btn__medium"
-                          onClick={() =>
-                            router.push(`/services/${singleservice.id}`)
-                          }
-                        >
-                          Learn more
-                        </button> */}
                         <Link
                           className="btn btn__primary btn__medium"
-                          href={`/services/${singleservice.id}`}
+                          href={`/services/${singleservice.slug}`}
                         >
                           Learn more
                         </Link>

@@ -251,6 +251,26 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
           />
         </svg>
       );
+    case "up_arrow":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={width || "24px"}
+          height={height || "25px"}
+          className={className}
+          style={style}
+          {...props}
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M3 17L12 7L21 17"
+            stroke="black"
+            stroke-width="2"
+            stroke-miterlimit="10"
+          />
+        </svg>
+      );
     default:
       return null;
   }
