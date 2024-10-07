@@ -6,6 +6,8 @@ import Transitflow from "../assets/images/successstory/transitflow.png";
 import Automation from "../assets/images/successstory/automation.png";
 import Seacraft from "../assets/images/successstory/seacraft.png";
 import Ella from "../assets/images/successstory/ella.png";
+import { motion } from "framer-motion";
+import Easeanimation from "@/components/Easeanimation.jsx";
 
 function Successstories({ slicenum }) {
   const successStoriesCard = [
@@ -46,25 +48,31 @@ function Successstories({ slicenum }) {
     <>
       <section className="Successstories__section">
         <div className="container success-stories">
-          <div className="success-stories__content">
+          <Easeanimation className="success-stories__content">
             <h4 className="success-stories__title">OUR SUCCESS STORIES</h4>
             <h2 className="success-stories__subtitle">
               Transformative solutions, real-world impact
             </h2>
-          </div>
+          </Easeanimation>
 
           <div className="success-stories__cards">
             {successStoriesCard.slice(0, slicenum).map((card) => {
               return (
                 <>
-                  <div className="success-stories__card">
-                    <div className="card__img">
-                      <Image
-                        src={card.imgSrc}
-                        className="card__image"
-                        alt="card image"
-                      />
-                    </div>
+                  <Easeanimation delay={0.5} className="success-stories__card">
+                    <motion.div className="card__img">
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <Image
+                          src={card.imgSrc}
+                          className="card__image"
+                          alt="card image"
+                        />
+                      </motion.div>
+                    </motion.div>
+
                     <div className="card__content-btn">
                       <div className="card__content">
                         <h3 className="card__content-title">{card.title}</h3>
@@ -84,7 +92,7 @@ function Successstories({ slicenum }) {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Easeanimation>
                 </>
               );
             })}

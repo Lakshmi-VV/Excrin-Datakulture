@@ -1,8 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import React from "react";
 import { Icons } from "./Icons.jsx";
 import Link from "next/link.js";
+import Easeanimation from "./Easeanimation.jsx";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +29,12 @@ function Header() {
             <div className="navbar__logo">
               <Icons icon="datakulture_logo" />
             </div>
-            <nav className="navbar__menu">
+            <Easeanimation
+              y={5}
+              duration={0.5}
+              staggerChildren={0.2}
+              className="navbar__menu"
+            >
               <div className="navbar__item">
                 <Link
                   href="/services"
@@ -46,13 +53,13 @@ function Header() {
                   Resources
                 </Link>
               </div>
-            </nav>
+            </Easeanimation>
           </div>
-          <div className="header__button">
+          <Easeanimation y={10} duration={0.5} className="header__button">
             <Link href="/" className=" btn btn__primary btn__medium">
               Contact us
             </Link>
-          </div>
+          </Easeanimation>
         </div>
       </header>
       <div className="mobile-nav">

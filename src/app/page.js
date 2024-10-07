@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Icons } from "../components/Icons.jsx";
@@ -13,34 +15,40 @@ import Datascience from "../assets/images/services/datascience.png";
 import Datavisualization from "../assets/images/services/datavisualization.png";
 import Whydatakulture from "../assets/images/gif/whydatakulture.png";
 import Clientlogoslider from "@/components/Clientlogoslider";
+import Easeanimation from "@/components/Easeanimation.jsx";
 
 export default function HomePage() {
   const ourServices = [
     {
+      slug: "data-engineering",
       imgsrc: Dataengineering,
       title: "Data Engineering",
       description:
         "Designing systems to collect, store, transport and transform your data.",
     },
     {
+      slug: "data-consulting",
       imgsrc: Dataconsultation,
       title: "Data consulting",
       description:
         "Understanding the purpose, value, and scale of your organization's data.",
     },
     {
+      slug: "data-visualization",
       imgsrc: Datavisualization,
       title: "Data visualization",
       description:
         "Representing relationships and revealing hidden insights in your data.",
     },
     {
+      slug: "data-science",
       imgsrc: Datascience,
       title: "Data science",
       description:
         " Leveraging AI and ML to unlock unprecedented business value.",
     },
   ];
+
   return (
     <>
       {/* Hero section */}
@@ -48,24 +56,33 @@ export default function HomePage() {
         <div className="container hero">
           <div className="hero__content-image">
             <div className="hero__content-text">
-              <div className="hero-section__title-description">
-                <div className="hero-section__title">
-                  <h1 className="hero-section__title text-large  text-fw-medium">
+              <Easeanimation
+                staggerChildren={0.5}
+                className="hero-section__title-description"
+              >
+                <motion.div className="hero-section__title">
+                  <h1 className="hero-section__title text-large text-fw-medium">
                     Start visualizing your business data with AI-driven insights
                   </h1>
-                </div>
-                <div className="hero-section__description text-small  text-fw-regular">
+                </motion.div>
+
+                <motion.div className="hero-section__description text-small text-fw-regular">
                   <p>
                     Make informed decisions, drive growth, and stay ahead of the
                     competition by harnessing the full potential of your data
                     with our intuitive and intelligent solution.
                   </p>
-                </div>
-              </div>
-              <button className="btn btn__primary btn__large hero-section__btn ">
+                </motion.div>
+              </Easeanimation>
+
+              <Easeanimation
+                delay={0.7}
+                className="btn btn__primary btn__large hero-section__btn"
+              >
                 Contact us
-              </button>
+              </Easeanimation>
             </div>
+
             <div className="hero-section__img">
               <Image
                 className="hero-section__image"
@@ -84,17 +101,18 @@ export default function HomePage() {
       {/* Our services */}
       <section className="our-services_section">
         <div className="container our-services">
-          <div className="our-services__content">
-            <h4 className="our-services__title">OUR SERVICES</h4>
-            <h2 className="our-services__subtitle">
+          <Easeanimation className="our-services__content">
+            <motion.h4 className="our-services__title">OUR SERVICES</motion.h4>
+            <motion.h2 className="our-services__subtitle">
               Catalyzing your data journey
-            </h2>
-          </div>
-          <div className="our-services__list">
+            </motion.h2>
+          </Easeanimation>
+
+          <Easeanimation staggerChildren={0.4} className="our-services__list">
             {ourServices.map((service) => {
               return (
                 <>
-                  <div className="our-services__item">
+                  <motion.div className="our-services__item">
                     <div className="our-services__item-content">
                       <Image
                         src={service.imgsrc}
@@ -109,7 +127,10 @@ export default function HomePage() {
                       </p>
                     </div>
                     <div className="learn-more__btn">
-                      <Link href="/" className="learn-more__btn-text">
+                      <Link
+                        href={`/services/${service.slug}`}
+                        className="learn-more__btn-text"
+                      >
                         Learn more
                       </Link>
                       <Icons
@@ -117,11 +138,11 @@ export default function HomePage() {
                         className="learn-more__btn-icon"
                       />
                     </div>
-                  </div>
+                  </motion.div>
                 </>
               );
             })}
-          </div>
+          </Easeanimation>
         </div>
       </section>
 
@@ -132,21 +153,23 @@ export default function HomePage() {
 
       {/* Our technologies */}
       <section className="technologies__section">
-        <div className="container technologies">
-          <div className="technologies__content">
+        <Easeanimation staggerChildren={1} className="container technologies">
+          <Easeanimation className="technologies__content">
             <h4 className="technologies__title text-xsmall  text-fw-regular">
               OUR TECHNOLOGIES
             </h4>
             <h2 className="technologies__description text-large  text-fw-medium">
               Empowering Innovations with leading-edge technologies
             </h2>
+          </Easeanimation>
+          <div className="technologies__image">
+            <Image
+              src={Technologiesgif}
+              alt="Technologies GIF"
+              className="technologies__img"
+            />
           </div>
-          <Image
-            src={Technologiesgif}
-            className="technologies__image"
-            alt="Technologies GIF"
-          />
-        </div>
+        </Easeanimation>
       </section>
 
       <Successstories />

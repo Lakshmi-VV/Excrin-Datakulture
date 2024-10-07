@@ -271,6 +271,34 @@ export const Icons = ({ icon, width, height, style, className, ...props }) => {
           />
         </svg>
       );
+    case "progress_dot":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={width || "23px"}
+          height={height || "23px"}
+          className={className}
+          style={style}
+          {...props}
+          viewBox="0 0 33 33"
+          fill="none"
+        >
+          <circle cx="16.5" cy="16.5" r="8.5" fill="#FCAF17" />
+        </svg>
+      );
+    case "progress_dot-active":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={width || "24px"}
+          height={height || "23px"}
+          viewBox="0 0 34 33"
+          fill="none"
+        >
+          <circle cx="17.25" cy="16.5" r="16" fill="white" stroke="black" />
+          <circle cx="17.25" cy="16.5" r="8.5" fill="#FCAF17" />
+        </svg>
+      );
     default:
       return null;
   }

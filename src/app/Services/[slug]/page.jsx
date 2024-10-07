@@ -11,6 +11,7 @@ import Clientlogoslider from "@/components/Clientlogoslider";
 import Link from "next/link";
 import Image from "next/image";
 import { Icons } from "@/components/Icons";
+import Easeanimation from "@/components/Easeanimation";
 
 function SingleService({ params }) {
   const slug = params.slug;
@@ -49,9 +50,15 @@ function SingleService({ params }) {
     },
   ];
 
-  const [activeStage, setActiveStage] = useState(0);
+  const [activeStages, setActiveStages] = useState([0]);
+  const [currentStageIndex, setCurrentStageIndex] = useState(0);
   const handleStepClick = (index) => {
-    setActiveStage(index);
+    if (index > activeStages[activeStages.length - 1]) {
+      setActiveStages([...Array(index + 1).keys()]);
+    } else {
+      setActiveStages(activeStages.filter((stage) => stage <= index));
+    }
+    setCurrentStageIndex(index);
   };
 
   const [activeIndex, setActiveIndex] = useState();
@@ -66,7 +73,7 @@ function SingleService({ params }) {
         <div className="container singleservice__hero">
           <div className="singleservice__hero-content-image">
             <div className="singleservice__herocontent">
-              <div className="singleservice__hero-title-description">
+              <Easeanimation className="singleservice__hero-title-description">
                 <div className="singleservice__hero-breadcrumbs">
                   <Link href="/services" className="text-small text-fw-regular">
                     Services
@@ -87,12 +94,12 @@ function SingleService({ params }) {
                 <p className="singleservice__hero-description text-small text-fw-regular">
                   {service.herosection.description}
                 </p>
-              </div>
-              <div className="singleservice__hero-btn ">
+              </Easeanimation>
+              <Easeanimation delay={1.5} className="singleservice__hero-btn ">
                 <button className="btn btn__primary btn__large">
                   Contact us
                 </button>
-              </div>
+              </Easeanimation>
             </div>
             <div className="singleservice__hero-image">
               <Image
@@ -112,14 +119,14 @@ function SingleService({ params }) {
       {/* Service content */}
       <section className="singleservice__approaches-section">
         <div className="container singleservice__approaches">
-          <div className="singleservice__approaches-content">
+          <Easeanimation className="singleservice__approaches-content">
             <h4 className="singleservice__approaches-title text-xsmall text-fw-regular">
               {service.title}
             </h4>
             <h2 className="singleservice__approaches-subtitle text-large text-fw-medium">
               {service.approach_title}
             </h2>
-          </div>
+          </Easeanimation>
 
           {service.approaches.map((approach, index) => {
             const isEven = index % 2 === 0;
@@ -136,7 +143,11 @@ function SingleService({ params }) {
                         className="single-service__approach-img"
                       />
                     </div>
-                    <div className="single-service__approach-title-description ">
+                    <Easeanimation
+                      delay={0.5}
+                      staggerChildren={0.3}
+                      className="single-service__approach-title-description "
+                    >
                       <h3 className="single-service__approach-title text-h3 text-fw-medium">
                         {approach.title}
                       </h3>
@@ -146,14 +157,14 @@ function SingleService({ params }) {
                         <br />
                         {approach.description[1]}
                       </p>
-                    </div>
+                    </Easeanimation>
                   </div>
                 ) : (
                   <div
                     className="singleservice__approach odd-index"
                     key={approach.title}
                   >
-                    <div className="single-service__approach-title-description ">
+                    <Easeanimation className="single-service__approach-title-description ">
                       <h3 className="single-service__approach-title text-h3 text-fw-medium">
                         {approach.title}
                       </h3>
@@ -163,7 +174,7 @@ function SingleService({ params }) {
                         <br />
                         {approach.description[1]}
                       </p>
-                    </div>
+                    </Easeanimation>
                     <div className="single-service__approach-image">
                       <Image
                         src={approach.imgSrc}
@@ -183,14 +194,14 @@ function SingleService({ params }) {
       {/* Process section */}
       <section className="singleservice-processsection">
         <div className="container singleservice__process">
-          <div className="singleservice__process-content">
+          <Easeanimation className="singleservice__process-content">
             <h4 className="singleservice__process-title text-xsmall text-fw-regular">
               OUR PROCESS
             </h4>
             <h2 className="singleservice__process-subtitle text-large text-fw-medium">
               Our process is agile, flexible and tailored to your needs
             </h2>
-          </div>
+          </Easeanimation>
 
           <div className="process__timeline">
             <div className="process__timeline-content">
@@ -199,12 +210,28 @@ function SingleService({ params }) {
                   <>
                     <div
                       key={index}
-                      className={`process__timeline-item  ${
-                        activeStage === index ? "active" : ""
-                      }`}
+                      className={`process__timeline-item ${
+                        activeStages.includes(index) ? "active" : ""
+                      } `}
                       onClick={() => handleStepClick(index)}
                     >
-                      <p className="text-xsmall text-fw-regular"> {stage}</p>
+                      <div className="progress">
+                        <div className="progress_dot-inactive">
+                          <Icons icon="progress_dot" />
+                        </div>
+                        <div className="progress_dot-active">
+                          <Icons icon="progress_dot-active" />
+                        </div>
+                      </div>
+
+                      <p
+                        className={`text-xsmall text-fw-regular ${
+                          index === currentStageIndex ? "underline" : ""
+                        }`}
+                      >
+                        {" "}
+                        {stage}
+                      </p>
                     </div>
                   </>
                 );
@@ -212,23 +239,31 @@ function SingleService({ params }) {
             </div>
           </div>
 
-          <div className="process__stage">
-            <div className="process__stage-title-description">
-              <h3 className="process__stage-title text-fw-medium text-h3">
-                {service.process[activeStage].title}
-              </h3>
-              <p className="process__stage-description text-xsmall text-regular">
-                {service.process[activeStage].description}
-              </p>
+          {activeStages.length && (
+            <div className="process__stage">
+              <Easeanimation className="process__stage-title-description">
+                <h3 className="process__stage-title text-fw-medium text-h3">
+                  {service.process[activeStages[activeStages.length - 1]].title}
+                </h3>
+                <p className="process__stage-description text-xsmall text-regular">
+                  {
+                    service.process[activeStages[activeStages.length - 1]]
+                      .description
+                  }
+                </p>
+              </Easeanimation>
+              <div className="process__stage-image">
+                <Image
+                  src={
+                    service.process[activeStages[activeStages.length - 1]]
+                      .imgSrc
+                  }
+                  className="process__stage-img"
+                  loading="eager"
+                />
+              </div>
             </div>
-            <div className="process__stage-image">
-              <Image
-                src={service.process[activeStage].imgSrc}
-                className="process__stage-img"
-                loading="eager"
-              />
-            </div>
-          </div>
+          )}
 
           <div className="process__accordians">
             {service.process.map((item, index) => (
@@ -271,14 +306,14 @@ function SingleService({ params }) {
       <section className="servicebenefits-section">
         <div className="container servicebenefits">
           <div className="servicebenefits__heading-sticky">
-            <div className="servicebenefits__heading">
+            <Easeanimation className="servicebenefits__heading">
               <h4 className="servicebenefits__title text-xsmall text-fw-regular">
                 BENEFITS
               </h4>
               <h2 className="servicebenefits__subtitle text-large text-fw-medium">
                 How you can drive maximum value work with data.
               </h2>
-            </div>
+            </Easeanimation>
           </div>
 
           <div className="servicebenefits__content-line">

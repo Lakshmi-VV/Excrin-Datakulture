@@ -1,7 +1,10 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Icons } from "../components/Icons.jsx";
+import Easeanimation from "@/components/Easeanimation.jsx";
 
 function Whydk({ subtitle, imageSrc }) {
   const whydkFeatures = [
@@ -28,25 +31,36 @@ function Whydk({ subtitle, imageSrc }) {
     <>
       <section className="why-datakulture__section">
         <div className="container why-datakulture">
-          <div className="why-datakulture__header">
-            <h4 className="why-datakulture__title text-xsmall text-fw-regular">
+          <Easeanimation
+            staggerChildren={0.2}
+            className="why-datakulture__header"
+          >
+            <motion.h4 className="why-datakulture__title text-xsmall text-fw-regular">
               WHY DATAKULTURE
-            </h4>
-            <h2 className="why-datakulture__subtitle text-large text-fw-medium">
+            </motion.h4>
+            <motion.h2 className="why-datakulture__subtitle text-large text-fw-medium">
               {subtitle}
-            </h2>
-          </div>
+            </motion.h2>
+          </Easeanimation>
+
           <div className="why-datakulture__content">
             <Image
               src={imageSrc}
-              className="why-datakulture__image"
               alt="why-datakulture__image"
+              className="why-datakulture__image"
             />
-            <div className="why-datakulture__features">
+
+            <Easeanimation
+              staggerChildren={0.5}
+              className="why-datakulture__features"
+            >
               {whydkFeatures.map((feature) => {
                 return (
                   <>
-                    <div className="why-datakulture__feature">
+                    <motion.div
+                      staggerChildren={0.2}
+                      className="why-datakulture__feature"
+                    >
                       <h3 className="why-datakulture__feature-title text-h3 text-fw-medium">
                         {feature.title}
                       </h3>
@@ -65,11 +79,11 @@ function Whydk({ subtitle, imageSrc }) {
                           className="learn-more__btn-icon"
                         />
                       </div>
-                    </div>
+                    </motion.div>
                   </>
                 );
               })}
-            </div>
+            </Easeanimation>
           </div>
         </div>
       </section>

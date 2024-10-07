@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import Easeanimation from "./Easeanimation.jsx";
+import { motion } from "framer-motion";
 
 function Ctabanner({ imgSrc }) {
   return (
@@ -7,7 +10,7 @@ function Ctabanner({ imgSrc }) {
       <section className="ctabanner-section ">
         <div className=" ctabanner">
           <div className="ctabanner__content-btn">
-            <div className="ctabanner__content">
+            <Easeanimation staggerChildren={0.3} className="ctabanner__content">
               <h2 className="ctabanner__title">
                 {`Let's decode your data together`}
               </h2>
@@ -15,12 +18,12 @@ function Ctabanner({ imgSrc }) {
                 Start your journey with a free consultation from our data
                 experts.
               </p>
-            </div>
-            <div className="ctabanner__btn">
+            </Easeanimation>
+            <Easeanimation delay={0.5} className="ctabanner__btn">
               <button className="btn btn__large btn__white">
                 Book free consultation
               </button>
-            </div>
+            </Easeanimation>
           </div>
           <div className="ctabanner__image">
             <Image

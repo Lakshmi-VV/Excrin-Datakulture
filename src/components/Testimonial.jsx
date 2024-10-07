@@ -15,6 +15,8 @@ import TestimonialHorizontal from "../assets/images/gif/testimonialhorizontal.pn
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import Easeanimation from "./Easeanimation.jsx";
+import { motion } from "framer-motion";
 
 function Testimonial() {
   const partners = [
@@ -58,12 +60,15 @@ function Testimonial() {
         <div className="container testimonial">
           <div className="testimonial__content">
             <div className="testimonial__title-arrows">
-              <div className="testimonial__title-description">
+              <Easeanimation
+                staggerChildren={0.4}
+                className="testimonial__title-description"
+              >
                 <h4 className="testimonial__title">CLIENT VOICES</h4>
                 <h2 className="testimonial__description">
                   Partnerships that speak success
                 </h2>
-              </div>
+              </Easeanimation>
               <div className="testimonial__arrows">
                 <Link
                   href="/"
@@ -105,7 +110,10 @@ function Testimonial() {
                 {clientReview.map((client, index) => {
                   return (
                     <SwiperSlide key={index}>
-                      <div className="testimonial__client-text">
+                      <Easeanimation
+                        delay={0.5}
+                        className="testimonial__client-text"
+                      >
                         <div>
                           <p className="client__review">{client.review}</p>
                         </div>
@@ -120,7 +128,7 @@ function Testimonial() {
                             <p className="client-company">{client.company}</p>
                           </div>
                         </div>
-                      </div>
+                      </Easeanimation>
                     </SwiperSlide>
                   );
                 })}
@@ -143,20 +151,20 @@ function Testimonial() {
             </div>
           </div>
           <div className="partnership">
-            <div className="partnership__text">
+            <Easeanimation className="partnership__text">
               <p>We have Implemented 250+ Projects in Partnership with</p>
-            </div>
+            </Easeanimation>
             <div className="partners">
               {partners.map((partner) => {
                 return (
                   <>
-                    <div className="partner">
+                    <Easeanimation delay={0.4} className="partner">
                       <Image
                         src={partner.imgSrc}
                         className={`${partner.name}`}
                         alt={`${partner.name}`}
                       />
-                    </div>
+                    </Easeanimation>
                   </>
                 );
               })}

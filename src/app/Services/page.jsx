@@ -16,6 +16,7 @@ import Datavisualization from "@/assets/images/services/datavisualization.png";
 import Link from "next/link";
 import Clientlogoslider from "@/components/Clientlogoslider";
 import Servicefaq from "@/components/Servicefaq";
+import Easeanimation from "@/components/Easeanimation";
 
 function Services() {
   const [activeService, setActiveService] = useState();
@@ -106,7 +107,10 @@ function Services() {
       <section className="service-herosection">
         <div className="container service__hero">
           <div className="service__hero-content-image">
-            <div className="service__hero-content">
+            <Easeanimation
+              staggerChildren={0.4}
+              className="service__hero-content"
+            >
               <h4 className="service__hero-content-title">Services</h4>
               <h2 className="service__hero-content-subtitle">
                 Our data and analytics consulting services
@@ -114,7 +118,7 @@ function Services() {
               <p className="service__hero-content-description">
                 Providing end to end solutions by analyzing data is our forte!
               </p>
-            </div>
+            </Easeanimation>
             <div className="service__hero-image">
               <Image
                 src={Hero}
@@ -161,26 +165,31 @@ function Services() {
                 return (
                   <>
                     <div
+                      staggerChildren={0.3}
+                      delay={0.2}
                       className="singleservice__content"
                       id={`service-${index}`}
                       ref={(el) => (services.current[index] = el)}
                       key={index}
                     >
                       <div className="singleservice__title-image">
-                        <div className="singleservice-image">
+                        <Easeanimation className="singleservice-image">
                           <Image
                             src={singleservice.imgSrc}
                             className="singleservice-img"
                             alt={singleservice.title}
                           />
-                        </div>
-                        <div>
+                        </Easeanimation>
+                        <Easeanimation>
                           <h3 className="singleservice-title text-fw-medium text-h2">
                             {singleservice.title}
                           </h3>
-                        </div>
+                        </Easeanimation>
                       </div>
-                      <div className="singleservice-subservices">
+                      <Easeanimation
+                        staggerChildren={0.1}
+                        className="singleservice-subservices"
+                      >
                         {singleservice.subservices.map((service) => {
                           return (
                             <>
@@ -195,18 +204,21 @@ function Services() {
                             </>
                           );
                         })}
-                      </div>
-                      <div className="singleservice-description text-small text-fw-regular">
+                      </Easeanimation>
+                      <Easeanimation
+                        delay={0.3}
+                        className="singleservice-description text-small text-fw-regular"
+                      >
                         <p>{singleservice.description}</p>
-                      </div>
-                      <div className="singleservice-btn">
+                      </Easeanimation>
+                      <Easeanimation delay={0.4} className="singleservice-btn">
                         <Link
                           className="btn btn__primary btn__medium"
                           href={`/services/${singleservice.slug}`}
                         >
                           Learn more
                         </Link>
-                      </div>
+                      </Easeanimation>
                     </div>
 
                     {index !== servicesgrp.length - 1 && (
