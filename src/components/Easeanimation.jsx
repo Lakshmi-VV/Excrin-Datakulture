@@ -3,14 +3,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const parentVariants = (staggerChildren, duration, y, delay) => ({
-  hidden: { y: y || 10, opacity: 0 },
+  hidden: { y: y || 6, opacity: 0 },
   whileInView: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: duration || 0.5,
+      duration: duration || 0.3,
       ease: "linear",
-      staggerChildren: staggerChildren || 0.6,
+      staggerChildren: staggerChildren || 0.5,
       delay: delay || 0,
     },
   },

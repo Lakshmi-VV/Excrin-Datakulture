@@ -69,6 +69,8 @@ function Successstories({ slicenum }) {
                           src={card.imgSrc}
                           className="card__image"
                           alt="card image"
+                          width={632}
+                          height={357}
                         />
                       </motion.div>
                     </motion.div>

@@ -90,11 +90,15 @@ function Testimonial() {
                   src={TestimonialPattern}
                   alt="TestimonialPattern"
                   className="testimonial__image"
+                  width={304}
+                  height={225}
                 />
                 <Image
                   src={TestimonialHorizontal}
                   alt="TestimonialHorizontal pattern"
                   className="testimonialHorizontal__image"
+                  width={175}
+                  height={32}
                 />
               </div>
 
@@ -122,6 +126,8 @@ function Testimonial() {
                             src={client.imgSrc}
                             alt="client image"
                             className="client_image"
+                            width={96}
+                            height={96}
                           />
                           <div className="client__name-company">
                             <p className="client-name">{client.clientName}</p>
@@ -163,6 +169,8 @@ function Testimonial() {
                         src={partner.imgSrc}
                         className={`${partner.name}`}
                         alt={`${partner.name}`}
+                        width={160}
+                        height={112}
                       />
                     </Easeanimation>
                   </>

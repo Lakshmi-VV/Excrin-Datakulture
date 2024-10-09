@@ -125,6 +125,8 @@ function Services() {
                 loading="eager"
                 className="service__hero-img"
                 alt="service-hero image"
+                width={642}
+                height={464}
               />
             </div>
           </div>
@@ -178,6 +180,8 @@ function Services() {
                             src={singleservice.imgSrc}
                             className="singleservice-img"
                             alt={singleservice.title}
+                            width={96}
+                            height={96}
                           />
                         </Easeanimation>
                         <Easeanimation>

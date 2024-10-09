@@ -30,6 +30,8 @@ function Ctasection() {
             src={Ctaimage}
             className="cta-section__image"
             alt="cta section image"
+            width={1440}
+            height={480}
           />
         </div>
       </section>

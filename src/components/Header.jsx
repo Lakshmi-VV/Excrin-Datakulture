@@ -30,9 +30,9 @@ function Header() {
               <Icons icon="datakulture_logo" />
             </div>
             <Easeanimation
-              y={5}
-              duration={0.5}
-              staggerChildren={0.2}
+              y={3}
+              duration={0.3}
+              staggerChildren={0.1}
               className="navbar__menu"
             >
               <div className="navbar__item">

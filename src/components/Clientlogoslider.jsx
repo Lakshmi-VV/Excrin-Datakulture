@@ -70,6 +70,8 @@ function Clientlogoslider() {
                   src={logo.imgSrc}
                   alt={logo.name}
                   className="client-logo__image"
+                  width={104}
+                  height={64}
                 />
               </div>
             </SwiperSlide>

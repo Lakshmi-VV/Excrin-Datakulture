@@ -57,7 +57,7 @@ export default function HomePage() {
           <div className="hero__content-image">
             <div className="hero__content-text">
               <Easeanimation
-                staggerChildren={0.5}
+                staggerChildren={0.2}
                 className="hero-section__title-description"
               >
                 <motion.div className="hero-section__title">
@@ -76,7 +76,7 @@ export default function HomePage() {
               </Easeanimation>
 
               <Easeanimation
-                delay={0.7}
+                delay={0.3}
                 className="btn btn__primary btn__large hero-section__btn"
               >
                 Contact us
@@ -89,6 +89,8 @@ export default function HomePage() {
                 src={Herogif}
                 alt="Hero section Image"
                 loading="eager"
+                width={648}
+                height={648}
               />
             </div>
           </div>
@@ -108,7 +110,7 @@ export default function HomePage() {
             </motion.h2>
           </Easeanimation>
 
-          <Easeanimation staggerChildren={0.4} className="our-services__list">
+          <Easeanimation staggerChildren={0.2} className="our-services__list">
             {ourServices.map((service) => {
               return (
                 <>
@@ -118,6 +120,8 @@ export default function HomePage() {
                         src={service.imgsrc}
                         alt={`${service.title} image`}
                         className="our-services__item-image"
+                        width={96}
+                        height={96}
                       />
                       <h3 className="our-services__item-title">
                         {service.title}
@@ -153,7 +157,7 @@ export default function HomePage() {
 
       {/* Our technologies */}
       <section className="technologies__section">
-        <Easeanimation staggerChildren={1} className="container technologies">
+        <Easeanimation staggerChildren={0.6} className="container technologies">
           <Easeanimation className="technologies__content">
             <h4 className="technologies__title text-xsmall  text-fw-regular">
               OUR TECHNOLOGIES
@@ -167,6 +171,8 @@ export default function HomePage() {
               src={Technologiesgif}
               alt="Technologies GIF"
               className="technologies__img"
+              width={874}
+              height={392}
             />
           </div>
         </Easeanimation>

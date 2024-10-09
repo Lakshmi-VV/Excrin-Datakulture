@@ -30,6 +30,8 @@ function Ctabanner({ imgSrc }) {
               src={imgSrc}
               className="ctabanner__img"
               alt="ctabanner image"
+              width={649}
+              height={388}
             />
           </div>
         </div>

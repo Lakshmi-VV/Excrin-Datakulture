@@ -43,7 +43,7 @@ function Servicefaq() {
                         {accordion.question}
                       </div>
                       <div className="down__arrow">
-                        <Icons icon="down_arrow" />
+                        <Icons icon="down_arrow" width={24} height={24} />
                       </div>
                     </div>
                   </div>

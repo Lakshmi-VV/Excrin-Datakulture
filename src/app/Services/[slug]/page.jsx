@@ -107,6 +107,8 @@ function SingleService({ params }) {
                 className="singleservice__hero-img"
                 alt="singleservice__hero-img"
                 loading="eager"
+                width={1102}
+                height={329}
               />
             </div>
           </div>
@@ -141,6 +143,8 @@ function SingleService({ params }) {
                       <Image
                         src={approach.imgSrc}
                         className="single-service__approach-img"
+                        width={648}
+                        height={486}
                       />
                     </div>
                     <Easeanimation
@@ -260,6 +264,8 @@ function SingleService({ params }) {
                   }
                   className="process__stage-img"
                   loading="eager"
+                  width={761}
+                  height={428}
                 />
               </div>
             </div>
@@ -293,6 +299,8 @@ function SingleService({ params }) {
                     <Image
                       src={item.imgSrc}
                       className="accordion-answer__img"
+                      width={761}
+                      height={428}
                     />
                   </div>
                 </div>

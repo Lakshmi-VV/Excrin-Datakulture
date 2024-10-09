@@ -44,14 +44,18 @@ function Whydk({ subtitle, imageSrc }) {
           </Easeanimation>
 
           <div className="why-datakulture__content">
-            <Image
-              src={imageSrc}
-              alt="why-datakulture__image"
-              className="why-datakulture__image"
-            />
+            <div className="why-datakulture__img">
+              <Image
+                src={imageSrc}
+                alt="why-datakulture__image"
+                className="why-datakulture__image"
+                width={761}
+                height={639}
+              />
+            </div>
 
             <Easeanimation
-              staggerChildren={0.5}
+              staggerChildren={0.3}
               className="why-datakulture__features"
             >
               {whydkFeatures.map((feature) => {
